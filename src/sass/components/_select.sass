@@ -1,0 +1,74 @@
+.select
+	.dropdown-toggle
+		position: relative
+		padding: 7px 0 7px 15px
+		font-family: $yanone
+		color: $black 
+		+f(17px, 300, 1.45)
+		outline: none 
+		background-color: transparent
+		border: 1px solid rgba(#3E3F43, .11)
+		&:focus
+			outline: none !important
+		&:after
+			display: none
+		.filter-option-inner
+			padding-right: 28px
+		.filter-option-inner-inner
+			color: $black 
+			text-overflow: ellipsis
+	.dropdown-menu
+		border-radius: 0
+		padding: 0
+		font-size: 16px
+		line-height: 1.5
+		border: none
+		box-shadow: 0 10px 20px rgba($black, 0.16)
+		li 
+		a
+			padding: 8px 16px
+			color: $black 
+			white-space: normal
+			transition: color .3s
+			+hover
+				color: $blue 
+	.dropdown-item
+		font-weight: 300 
+	.dropdown-item.active, .dropdown-item:active
+		color: $white
+		font-weight: 400 
+		background-color: $blue
+		+hover
+			color: $white
+	.inner
+		padding: 0
+	.check-mark
+		position: relative
+		float: left
+	.bs-actionsbox
+		padding: 22px 16px 18px
+		border-bottom: 1px solid rgba($black, .5) 
+		.btn-group
+			font-size: 0
+	.text-muted
+		color: $gray
+		font-size: 14px
+	.icon-chevron-down
+		position: absolute
+		top: 50%
+		right: 20px
+		margin-top: -3px
+		font-size: 6px
+
+.select_sm:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+	width: 160px
+	+md
+		width: 124px
+	+xs
+		width: 100%
+.select_md:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+	width: 255px
+	+md
+		width: 180px
+	+xs
+		width: 100%

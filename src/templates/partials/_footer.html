@@ -1,0 +1,46 @@
+<!-- begin footer -->
+<footer class="footer">
+	<div class="footer__inner inner">
+		<div class="footer__left">
+			<!-- begin logo -->
+			<a href="#" class="logo logo_white">
+				<span class="logo__text">НОРДТЕКС</span>
+			</a>
+			<!-- end logo -->
+			<!-- begin copy -->
+			<div class="copy">&copy; 2018</div>
+			<!-- end copy -->
+		</div>
+		<div class="footer__links">
+			<ul class="footer__list">
+				{% for text in ['О КОМПАНИИ', 'ПРОДУКЦИЯ', 'МАРКИ', 'ПАРТНЕРАМ', 'НОВОСТИ', 'КОНТАКТЫ'] %}
+				<li class="footer__item">
+					<a href="#" class="footer__link">{{ text }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="footer__communications">
+			<div class="soc-label">Мы в соц. сетях</div>
+			<ul class="soc">
+				<li class="soc__item"><a href="#" target="_blank" class="soc__link">{{ mixins.icon('twitter') }}</a></li>
+				<li class="soc__item"><a href="#" target="_blank" class="soc__link">{{ mixins.icon('facebook') }}</a></li>
+			</ul>
+			<div class="footer__btn">
+				<a href="#" class="btn btn_white">Стать партнером</a>
+			</div>
+		</div>
+		<div class="footer__contacts">
+			<div class="footer__field">
+				<a href="tel:88005553535" class="phone">{{ mixins.icon('phone') }}8 800 555 35 35</a>
+			</div>
+			<div class="footer__field">
+				<span class="contact-control">{{ mixins.icon('marker') }} Город балашиха шоссе энтузиастов владение 4</span>
+			</div>
+			<div class="footer__field">
+				<a href="mailto:ulnv.vl@gmail.com" class="contact-control">{{ mixins.icon('email') }}ulnv.vl@gmail.com</a>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- end footer -->

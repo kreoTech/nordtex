@@ -1,0 +1,72 @@
+.items
+	padding: 57px 0 25px
+	+sm
+		padding: 23px 0 13px
+	.pagination
+		margin-bottom: 23px 
+	&_gray
+		background-color: #F2F2F2 
+	&__col
+		margin-bottom: 45px
+		+sm
+			margin-bottom: 22px
+	&__filter
+		margin-bottom: 70px
+		+clr
+		+md
+			margin-bottom: 43px
+	&__title
+		margin-top: 20px
+		+f(30px,300,1.2)
+		float: left
+		+md
+			font-size: 20px
+		+xs
+			margin: 0 0 15px
+			float: none
+	&__right
+		float: right
+		+xs
+			float: none
+	&__select
+		vertical-align: top
+		display: inline-block
+		&:not(:first-child)
+			margin-left: 28px
+			+xs
+				margin: 15px 0 0
+		+xs
+			display: block
+.item
+	color: $black 
+	height: 100%
+	transition: color .3s, background-color .3s
+	display: block
+	+hover
+		color: $blue 
+	&_simple
+		+hover
+			color: $black
+			background-color: $white 
+	&__img
+		width: 100%
+		padding-bottom: 100%
+		background-position: center
+		background-size: cover
+		display: block
+	&__wrap
+		padding-top: 13px
+		display: block
+		+sm
+			padding-top: 10px
+		.item_simple &
+			padding: 13px 19px 18px
+	&__title
+		+f(20px,300,1.2)
+		letter-spacing: 0.03em
+		display: block
+		+sm
+			font-size: 14px
+	&__type
+		+f(17px,200,1.15)
+		display: block

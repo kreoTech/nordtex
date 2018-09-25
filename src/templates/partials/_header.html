@@ -1,1 +1,43 @@
-<p>Hello from partials/_header.html</p>
+<!-- begin header -->
+<header class="header">
+	<div class="header__inner inner">
+		<div class="header__left">
+			<!-- begin logo -->
+			<a href="#" class="logo">
+				<h1 class="logo__text">НОРДТЕКС</h1>
+			</a>
+			<!-- end logo -->
+			<!-- begin search -->
+			<div class="search">
+				<form action="">
+					<button class="search__button" type="submit">{{ mixins.icon('search') }}</button>
+				</form>
+			</div>
+			<!-- end search -->
+			<!-- begin nav -->
+			<nav class="nav">
+				<ul class="nav__list">
+					{% for text in ['О КОМПАНИИ', 'ПРОДУКЦИЯ', 'МАРКИ', 'ПАРТНЕРАМ', 'НОВОСТИ', 'КОНТАКТЫ'] %}
+					<li class="nav__item{% if loop.index === 3 %} is-active{% endif %}">
+						<a href="#" class="nav__link">{{ text }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</nav>
+			<!-- end nav -->
+		</div>
+		<div class="header__right">
+			<!-- begin login -->
+			<div class="login">
+				<a href="#" class="login__link">{{ mixins.icon('user') }}ВОЙТИ</a>
+			</div>
+			<!-- end login -->
+			<!-- begin partnership -->
+			<div class="partnership">
+				<a href="#" class="btn">Стать партнером</a>
+			</div>
+			<!-- end partnership -->
+		</div>
+	</div>
+</header>
+<!-- end header -->

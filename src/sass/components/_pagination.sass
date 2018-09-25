@@ -1,0 +1,42 @@
+.pagination
+	margin-bottom: 68px
+	font-family: $circe 
+	+f(20px,300,1.45)
+	text-align: center
+	color: $black 
+	+xs
+		margin-bottom: 34px
+	&__prev,
+	&__next,
+	&__item,
+	&__dots
+		vertical-align: top
+		display: inline-block
+	&__prev
+		margin-right: 30px
+	&__next
+		margin-left: 40px
+	&__prev-link,
+	&__next-link,
+	&__link
+		color: $black 
+	&__prev-link,
+	&__next-link
+		.icon
+			font-size: 15px
+	&__link,
+	&__prev-link,
+	&__next-link
+		transition: color .3s ease-in-out
+		+hover
+			color: $blue 
+	&__item,
+	&__dots
+		&:not(:first-child)
+			margin-left: 8px
+		&.is-active
+			.pagination__link
+				+f(25px,700,1)
+				color: $blue 
+	&__dots
+		cursor: default

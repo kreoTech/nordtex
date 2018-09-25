@@ -1,0 +1,110 @@
+.header
+	padding-bottom: 22px
+	background-color: $white 
+	+xs
+		padding-bottom: 15px
+	&__left
+		float: left
+	&__right
+		float: right
+		margin-top: 25px
+		+xs
+			margin-top: 15px
+
+.logo
+	color: $black 
+	vertical-align: top
+	display: inline-block
+	.header &
+		margin-top: 26px
+		+xs
+			margin-top: 17px 
+	&_white
+		color: $white 
+	&__text
+		font-family: $yanone
+		+f(30px,700,1.2) 
+		letter-spacing: 0.03em 
+		+xs
+			font-size: 24px
+.search
+	margin-top: 38px
+	font-size: 0
+	vertical-align: top
+	display: inline-block
+	+xs
+		display: none
+	&:not(:first-child)
+		margin-left: 35px 
+		+sm
+			margin-left: 30px
+	&__button
+		background-color: transparent
+		vertical-align: top
+		display: inline-block
+		.icon
+			font-size: 15px
+.nav
+	vertical-align: top
+	display: inline-block
+	+md
+		display: none
+	&:not(:first-child)
+		margin-left: 20px
+	&__list
+		font-size: 0
+	&__item
+		vertical-align: top
+		display: inline-block
+		&:not(:first-child)
+			margin-left: 6px
+			+lg
+				margin-left: 2px
+		&.is-active
+			.nav__link
+				color: $white 
+				background-color: $blue 
+	&__link
+		padding: 31px 16px 16px
+		letter-spacing: 0.035em 
+		color: $black
+		text-transform: uppercase 
+		font-size: 17px
+		transition: color .3s ease-in-out
+		display: block
+		+lg
+			padding: 31px 10px 16px
+		+hover
+			color: $blue
+.login
+	margin-top: 6px
+	vertical-align: top
+	display: inline-block
+	color: $black 
+	+f(17px,700,1.55) 
+	+xs
+		margin-top: 4px
+	&__link
+		color: $black 
+		letter-spacing: 0.03em
+		text-transform: uppercase
+		transition: color .3s ease-in-out
+		display: block
+		+hover
+			color: $blue
+		.icon
+			margin: 4px 7px 0 0
+			font-size: 20px
+			vertical-align: top
+			display: inline-block
+			+xs
+				margin: 6px 4px 0 0
+				font-size: 16px
+
+.partnership
+	vertical-align: top
+	display: inline-block
+	&:not(:first-child)
+		margin-left: 25px
+		+xs
+			margin-left: 10px 

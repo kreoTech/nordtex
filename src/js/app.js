@@ -1,2 +1,4 @@
-import svg4everybody from 'svg4everybody';
-svg4everybody();
+import { DOC } from './constants';
+import common from './common';
+
+DOC.ready(common);

@@ -1,6 +1,127 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-facebook" viewBox="0 0 10 19">
-    <title>
-        facebook
-    </title>
-    <path d="M9.766.157v2.946H8.014c-.64 0-1.071.134-1.295.402-.223.268-.335.67-.335 1.205v2.11h3.27l-.435 3.303H6.384v8.471H2.97v-8.47H.123V6.82H2.97V4.387c0-1.384.387-2.457 1.161-3.22C4.904.404 5.934.023 7.222.023c1.093 0 1.941.045 2.544.134z" fill-rule="evenodd"/>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><defs>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    
+        <style>
+            .cls-1{fill:#3e3f43}
+        </style>
+    
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    
+        <style>
+            .cls-1{opacity:.5}.cls-2{fill:#fff}
+        </style>
+    
+        <style>
+            .cls-1{fill:#5d5d5d}
+        </style>
+    
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    
+        <style>
+            .cls-1{fill:#3e3f43}
+        </style>
+    
+        <style>
+            .cls-1{opacity:.5}.cls-2{fill:#fff}
+        </style>
+    
+        <style>
+            .cls-1{fill:#3e3f43}
+        </style>
+    </defs><symbol id="icon-arrow-next" viewBox="0 0 32.562 15.182">
+    <path data-name="Path 7" d="M.499 7.186h31.563c.275 0 .5.156.5.348s-.223.348-.5.348H.499c-.275 0-.5-.156-.5-.348s.225-.348.5-.348z"/>
+    <path data-name="Path 8" d="M24.97 0a.292.292 0 0 1 .206.085l7.3 7.3a.292.292 0 0 1 0 .412l-7.3 7.3a.292.292 0 1 1-.414-.412l7.1-7.092-7.1-7.1a.291.291 0 0 1 .206-.5z"/>
+</symbol><symbol id="icon-arrow-prev" viewBox="0 0 32.562 15.182">
+    <path data-name="Path 7" d="M32.063 7.996H.5c-.275 0-.5-.156-.5-.348S.223 7.3.5 7.3h31.563c.275 0 .5.156.5.348s-.225.348-.5.348z"/>
+    <path data-name="Path 8" d="M7.592 15.182a.292.292 0 0 1-.206-.085l-7.3-7.3a.292.292 0 0 1 0-.412l7.3-7.3A.292.292 0 1 1 7.8.497L.7 7.589l7.1 7.1a.291.291 0 0 1-.206.5z"/>
+</symbol><symbol id="icon-check" viewBox="0 0 11.114 8.953">
+    
+    <path id="check" class="cls-1" d="M9.415 33.286l-5.556 5.556-2.159-2.16L0 38.381l3.859 3.858 7.255-7.254z" transform="translate(0 -33.286)"/>
+</symbol><symbol id="icon-chevron-down" viewBox="0 0 9.452 5.828">
+    
+    <g id="keyboard-right-arrow-button_7_" data-name="keyboard-right-arrow-button (7)" transform="rotate(90 34.051 -24.599)">
+        <g id="chevron-right" transform="translate(58.65)">
+            <path id="Path_20" data-name="Path 20" class="cls-1" d="M59.753 0l-1.1 1.1 3.623 3.623-3.626 3.626 1.1 1.1 4.726-4.726z" transform="translate(-58.65)"/>
+        </g>
+    </g>
+</symbol><symbol id="icon-email" viewBox="0 0 16.178 12.288">
+    
+    <path id="message-closed-envelope_3_" data-name="message-closed-envelope (3)" class="cls-1" d="M14.258 45.945H1.92A1.885 1.885 0 0 0 0 47.789v8.6a1.885 1.885 0 0 0 1.92 1.844h12.338a1.885 1.885 0 0 0 1.92-1.844v-8.6a1.885 1.885 0 0 0-1.92-1.844zm0 10.66H1.92c-.156 0-.292-.1-.292-.216v-7.463l5.58 4.711a.636.636 0 0 0 .41.15h.942a.636.636 0 0 0 .41-.15l5.58-4.711v7.463c0 .111-.137.211-.292.211zM8.089 52.17l-5.427-4.6h10.854z" transform="translate(0 -45.945)"/>
+</symbol><symbol id="icon-facebook" viewBox="0 0 16.004 16.004">
+    
+    <g id="facebook-logo_2_" data-name="facebook-logo (2)" class="cls-1">
+        <path id="Facebook__x28_alt_x29_" class="cls-2" d="M16 2.668A2.765 2.765 0 0 0 13.337 0H2.667A2.765 2.765 0 0 0 0 2.668v10.669A2.765 2.765 0 0 0 2.668 16H8V9.958H6.046V7.291H8V6.252a3.282 3.282 0 0 1 3-3.406h2.156v2.667H11c-.236 0-.511.286-.511.716v1.062h2.667v2.667h-2.664V16h2.845A2.765 2.765 0 0 0 16 13.337z"/>
+    </g>
+</symbol><symbol id="icon-home" viewBox="0 0 15.096 13.462">
+    
+    <g id="web-page-home" transform="translate(0 -26.353)">
+        <g id="Group_114" data-name="Group 114" transform="translate(0 26.353)">
+            <path id="Path_23" data-name="Path 23" class="cls-1" d="M.521 34.37h1.23v4.918a.529.529 0 0 0 .527.527h3.6a.529.529 0 0 0 .527-.527v-3.6H8.6v3.6a.529.529 0 0 0 .527.527h3.425a.529.529 0 0 0 .527-.527V34.37h1.493a.525.525 0 0 0 .369-.9l-6.866-6.961a.525.525 0 0 0-.738-.009L.161 33.465a.527.527 0 0 0-.123.58.514.514 0 0 0 .483.325zm7.167-6.745l5.621 5.691h-.755a.529.529 0 0 0-.527.527v4.918H9.655v-3.6a.529.529 0 0 0-.527-.527H5.879a.529.529 0 0 0-.527.527v3.6H2.805v-4.918a.529.529 0 0 0-.527-.527h-.457z" transform="translate(0 -26.353)"/>
+        </g>
+    </g>
+</symbol><symbol id="icon-left" viewBox="0 0 5.828 9.452">
+    
+    <g id="keyboard-right-arrow-button_7_" data-name="keyboard-right-arrow-button (7)" transform="rotate(180 32.24 4.726)">
+        <g id="chevron-right" transform="translate(58.65)">
+            <path id="Path_20" data-name="Path 20" class="cls-1" d="M59.753 0l-1.1 1.1 3.623 3.623-3.626 3.626 1.1 1.1 4.726-4.726z" transform="translate(-58.65)"/>
+        </g>
+    </g>
+</symbol><symbol id="icon-marker" viewBox="0 0 13.146 18.149">
+    
+    <g id="maps-and-flags_3_" data-name="maps-and-flags (3)" transform="translate(-70.573)">
+        <g id="Group_9" data-name="Group 9" transform="translate(70.573)">
+            <path id="Path_5" data-name="Path 5" class="cls-1" d="M77.146 0a6.58 6.58 0 0 0-6.573 6.573c0 4.5 5.882 11.1 6.133 11.38a.592.592 0 0 0 .881 0c.25-.279 6.133-6.882 6.133-11.38A6.58 6.58 0 0 0 77.146 0zm0 9.88a3.307 3.307 0 1 1 3.307-3.307 3.311 3.311 0 0 1-3.307 3.307z" transform="translate(-70.573)"/>
+        </g>
+    </g>
+</symbol><symbol id="icon-phone" viewBox="0 0 13.882 13.851">
+    
+    <g id="call-answer_2_" data-name="call-answer (2)" transform="translate(0 -.394)">
+        <g id="Group_8" data-name="Group 8" transform="translate(0 .394)">
+            <g id="Group_7" data-name="Group 7">
+                <path id="Path_4" data-name="Path 4" class="cls-1" d="M13.57 11.349L11.426 9.2a1.118 1.118 0 0 0-1.576.03l-1.08 1.08-.213-.11a10.748 10.748 0 0 1-2.6-1.879 10.808 10.808 0 0 1-1.883-2.6c-.04-.072-.078-.142-.116-.208l.725-.724.356-.357a1.117 1.117 0 0 0 .031-1.583L2.927.7a1.117 1.117 0 0 0-1.576.03l-.6.608.017.016a3.494 3.494 0 0 0-.5.878 3.641 3.641 0 0 0-.222.891c-.283 2.347.789 4.492 3.7 7.4 4.023 4.023 7.265 3.719 7.4 3.7a3.622 3.622 0 0 0 .893-.224 3.482 3.482 0 0 0 .875-.5l.013.012.612-.6a1.119 1.119 0 0 0 .031-1.562z" transform="translate(0 -.394)"/>
+            </g>
+        </g>
+    </g>
+</symbol><symbol id="icon-right" viewBox="0 0 5.828 9.452">
+    
+    <g id="keyboard-right-arrow-button_7_" data-name="keyboard-right-arrow-button (7)" transform="translate(-58.65)">
+        <g id="chevron-right" transform="translate(58.65)">
+            <path id="Path_20" data-name="Path 20" class="cls-1" d="M59.753 0l-1.1 1.1 3.623 3.623-3.626 3.626 1.1 1.1 4.726-4.726z" transform="translate(-58.65)"/>
+        </g>
+    </g>
+</symbol><symbol id="icon-search" viewBox="0 0 15.331 15.331">
+    
+    <g id="search" transform="translate(-6 -.003)">
+        <path id="Path_3" data-name="Path 3" class="cls-1" d="M14.99 13.325l-3.16-3.16a6.31 6.31 0 0 0 1.143-3.676 6.371 6.371 0 0 0-.512-2.52A6.352 6.352 0 0 0 9.006.514a6.464 6.464 0 0 0-5.04 0A6.352 6.352 0 0 0 .511 3.969a6.464 6.464 0 0 0 0 5.04 6.353 6.353 0 0 0 3.455 3.455 6.374 6.374 0 0 0 2.52.511 6.31 6.31 0 0 0 3.676-1.142l3.16 3.151a1.094 1.094 0 0 0 .829.35 1.179 1.179 0 0 0 .838-2.008zM9.4 9.4a3.975 3.975 0 0 1-2.916 1.212A3.975 3.975 0 0 1 3.57 9.4a3.975 3.975 0 0 1-1.211-2.911A3.975 3.975 0 0 1 3.57 3.573a3.975 3.975 0 0 1 2.916-1.211A3.976 3.976 0 0 1 9.4 3.573a3.975 3.975 0 0 1 1.212 2.916A3.975 3.975 0 0 1 9.4 9.4z" transform="translate(6)"/>
+    </g>
+</symbol><symbol id="icon-twitter" viewBox="0 0 19.568 15.895">
+    
+    <g id="twitter-logo-silhouette_2_" data-name="twitter-logo-silhouette (2)" class="cls-1" transform="translate(-.001 -57.441)">
+        <g id="Group_11" data-name="Group 11" transform="translate(.001 57.441)">
+            <path id="Path_6" data-name="Path 6" class="cls-2" d="M19.569 59.322a8.016 8.016 0 0 1-2.3.632 4.031 4.031 0 0 0 1.764-2.219 8.092 8.092 0 0 1-2.551.975 4.017 4.017 0 0 0-6.84 3.66 11.4 11.4 0 0 1-8.273-4.194 4.019 4.019 0 0 0 1.242 5.358 4.014 4.014 0 0 1-1.818-.5v.05a4.018 4.018 0 0 0 3.219 3.936 4.066 4.066 0 0 1-1.058.141 3.853 3.853 0 0 1-.756-.075 4.016 4.016 0 0 0 3.749 2.788 8.054 8.054 0 0 1-4.989 1.71A8.532 8.532 0 0 1 0 71.529a11.347 11.347 0 0 0 6.153 1.806 11.342 11.342 0 0 0 11.42-11.42l-.013-.52a8.016 8.016 0 0 0 2.009-2.073z" transform="translate(-.001 -57.441)"/>
+        </g>
+    </g>
+</symbol><symbol id="icon-user" viewBox="0 0 19.281 19.28">
+    
+    <g id="user_5_" data-name="user (5)" transform="translate(0 -.001)">
+        <path id="Path_9" data-name="Path 9" class="cls-1" d="M9.64 0a9.64 9.64 0 1 0 9.64 9.64A9.641 9.641 0 0 0 9.64 0zm0 2.882a3.189 3.189 0 1 1-3.188 3.19A3.189 3.189 0 0 1 9.64 2.883zm0 13.877a7.075 7.075 0 0 1-4.607-1.7 1.359 1.359 0 0 1-.477-1.033 3.216 3.216 0 0 1 3.231-3.215H11.5a3.211 3.211 0 0 1 3.226 3.215 1.355 1.355 0 0 1-.476 1.032 7.073 7.073 0 0 1-4.612 1.703z"/>
+    </g>
 </symbol></svg>

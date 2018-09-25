@@ -1,0 +1,109 @@
+---
+title: 4
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{% include "partials/_breadcrumbs.html" %}
+	<!-- begin slider -->
+	<div class="slider-wrap js-slider-wrap">
+		<div class="slider-wrap__out">
+			<div class="slider-wrap__inner inner">
+				<!-- begin wind -->
+				<div class="slider-wrap__wind wind">
+					<div class="wind__head">
+						<h5 class="wind__title">КОМНАТА</h5>
+						<div class="wind__list">
+							{% for text in ["Ванна", "Кухня", "Спальна", "Гостинная", "Комната"] %}
+							<label class="wind__item">
+								<input type="radio" name="rooms"{% if loop.index === 4 %} checked{% endif %}>
+								<span class="wind__text">{{ text }}</span>
+								<span class="wind__check">{{ mixins.icon('check') }}</span>
+							</label>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="wind__body">
+						<h5 class="wind__title">ДИЗАЙН</h5>
+						<div class="wind__name js-slide-name">Сладкий бриз</div>
+						<div class="wind__trigger">
+							<button class="wind__btn js-slider-prev" type="button">{{ mixins.icon('left') }}</button>
+							<div class="wind__numb js-slide-length">01</div>
+							<button class="wind__btn js-slider-next" type="button">{{ mixins.icon('right') }}</button>
+						</div>
+					</div>
+				</div>
+				<!-- end wind -->
+			</div>
+		</div>
+		<div class="slider js-slider">
+			<div class="slider__slide js-slider-slide" data-name="Сладкий бриз">
+				<div class="slider__bg" style="background-image: url(./img/slider-img.jpg);"></div>
+				<div class="slider__inner inner">
+					<div class="slider__content">
+						<h3 class="slider__title">Красиво. Доступно. Удобно</h3>
+						<p>Краткое описание преимуществ именно этой коллекции в несколько строк, а возможно опсианик данной коллекции в три строки</p>
+						<div class="slider__footer">
+							<a href="#" class="btn">Перейти к коллекции{{ mixins.icon('arrow-next') }}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider__slide js-slider-slide" data-name="Сладкий бриз 1">
+				<div class="slider__bg" style="background-image: url(./img/slider-img.jpg);"></div>
+				<div class="slider__inner inner">
+					<div class="slider__content">
+						<h3 class="slider__title">Красиво. Доступно. Удобно 2</h3>
+						<p>Краткое описание преимуществ именно этой коллекции в несколько строк, а возможно опсианик данной коллекции в три строки</p>
+						<div class="slider__footer">
+							<a href="#" class="btn">Перейти к коллекции{{ mixins.icon('arrow-next') }}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end slider -->
+	<!-- begin items -->
+	<div class="items items_gray">
+		<div class="items__inner inner">
+			<div class="items__filter">
+				<div class="items__title">Коллекция "Волшебная ночь"</div>
+				<div class="items__right">
+					<div class="items__select">
+						<div class="label">Дизайн</div>
+						<select class="select select_sm js-select" data-icon-arrow="chevron-down">
+							<option value="item">Техно</option>
+							<option value="item">item</option>
+							<option value="item">item</option>
+						</select>
+					</div>
+					<div class="items__select">
+						<div class="label">Коллекция</div>
+						<select class="select select_md js-select" data-icon-arrow="chevron-down">
+							<option value="item">Коллекция</option>
+							<option value="item">item</option>
+							<option value="item">item</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="items__row row">
+				{% for i in range(0,7) %}
+				<div class="items__col col col-25 col-sm-33 col-xs-50">
+					{{ mixins.item({
+						class: 'item_simple',	
+						type: 'Техно'
+					}) }}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		{% include "partials/_pagination.html" %}
+	</div>
+	<!-- end items -->
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

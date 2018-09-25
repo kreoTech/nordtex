@@ -1,0 +1,22 @@
+<!-- begin breadcrumbs -->
+<div class="breadcrumbs">
+	<div class="breadcrumbs__inner inner">
+		<ul class="breadcrumbs__list">
+			<li class="breadcrumbs__item">
+				<a href="#" class="breadcrumbs__link">{{ mixins.icon('home') }}</a>
+			</li>
+			{% for text in ['Выбор каталога', 'Марка', 'Стиль', 'Коллекция'] %}
+			{% if loop.last %}
+			<li class="breadcrumbs__item">
+				<span class="breadcrumbs__link"><span>{{ text }}</span></span>
+			</li>
+			{% else %}
+			<li class="breadcrumbs__item">
+				<a href="#" class="breadcrumbs__link"><span>{{ text }}</span></a>
+			</li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end breadcrumbs -->
