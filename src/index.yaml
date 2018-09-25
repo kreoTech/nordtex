@@ -5,3 +5,5 @@ PageList:
   ready: 100
 - file: 4-14.html
   ready: 100
+- file: cabinet.html
+  ready: 100

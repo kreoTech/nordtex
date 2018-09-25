@@ -15,3 +15,42 @@
 </a>
 <!-- end item -->
 {% endmacro %}
+
+{% macro order(props) %}
+	<div class="order">
+		<div class="row">
+			<div class="col col-25 col-sm-33 col-xs-100">
+				<div class="order__start">
+					<button class="order__btn">
+						{{ icon("cancel") }}
+					</button>
+					<span class="order__number">
+						Заказ №1245
+					</span>
+				</div>
+			</div>
+			<div class="col col-25 col-sm-33">
+				<span class="up-text up-text_sm">
+					Дата
+				</span>
+				<div class="order__text">
+					28.09.2018
+				</div>
+			</div>
+			<div class="col col-16 col-sm-33">
+				<span class="up-text up-text_sm">
+					На сумму
+				</span>
+				<div class="order__text">
+					37 500 Р
+				</div>
+			</div>
+			<div class="col col-16 col-sm-50">
+				<span class="btn btn_{{ props.color }}{% if props.type %} btn_{{ props.type }}{% endif %}">{{ props.text }}</span>
+			</div>
+			<div class="col col-16 col-md-50">
+				<a href="#" class="btn">Повторить заказ</a>
+			</div>
+		</div>
+	</div>
+{% endmacro %}

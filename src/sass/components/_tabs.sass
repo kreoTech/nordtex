@@ -1,0 +1,39 @@
+[data-tabs-control]
+	cursor: pointer
+[data-tabs-container]
+	display: none
+	&.is-open
+		display: block
+.tabs
+	&__out
+		background-color: #f2f2f2
+	&__current
+		display: none
+	&__list
+		font-size: 0
+	&__item
+		position: relative
+		display: inline-block
+		padding: 17px 41px 15px
+		font-weight: 300
+		color: $textLightGray
+		line-height: 1.2
+		border: 2px solid $borderLightGray
+		font-size: 20px
+		user-select: none
+		transition: background-color .3s, border-color .3s, color .3s
+		&.is-active
+			border-color: $blue
+			background-color: $blue
+			color: $white
+			z-index: 1
+		&:hover
+			border-color: $blue
+			background-color: $blue
+			color: $white
+		&:not(:first-child)
+			margin-left: -2px
+	.order
+		&:last-child
+			margin-bottom: 65px
+

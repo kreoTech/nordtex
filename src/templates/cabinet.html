@@ -1,0 +1,20 @@
+---
+title: cabinet
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{% include "partials/_breadcrumbs.html" %}
+	<!-- begin topic -->
+	<div class="topic">
+		<div class="topic__inner inner">
+			<h2 class="topic__title title">Мой кабинет</h2>
+		</div>
+	</div>
+	<!-- end topic -->
+	{% include "partials/_tabs.html"%}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}
