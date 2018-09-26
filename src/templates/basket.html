@@ -1,5 +1,5 @@
 ---
-title: cabinet
+title: basket
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -10,11 +10,12 @@ title: cabinet
 	<!-- begin topic -->
 	<div class="topic topic_lg">
 		<div class="topic__inner inner">
-			<h2 class="topic__title title">Мой кабинет</h2>
+			<h2 class="topic__title topic__title_wm title">Ваша корзина</h2>
+			<h5 class="topic__subtitle topic__subtitle_sm">Заказ №1245</h5>
 		</div>
 	</div>
 	<!-- end topic -->
-	{% include "partials/_tabs.html"%}
+	{% include "partials/_tabs-basket.html"%}
 	{% include "partials/_footer.html" %}
 
 {% endblock %}

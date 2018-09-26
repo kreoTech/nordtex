@@ -104,3 +104,17 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{% macro orderSubmit(text) %}
+<div class="order-submit">
+	<button class="btn" type="submit">{{ text }}</button>
+	<div class="order-submit__total">
+		<span class="up-text up-text_sm">
+			Итого
+		</span>
+		<div class="order-submit__text">
+			112 500 Р
+		</div>
+	</div>
+</div>
+{% endmacro %}
