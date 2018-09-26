@@ -5,12 +5,58 @@
 	&.is-open
 		display: block
 .tabs
+	&.is-open
+		.tabs__list
+			opacity: 1
+			z-index: 2
 	&__out
 		background-color: #f2f2f2
+		position: relative
 	&__current
 		display: none
+		padding: 17px 41px 15px
+		font-weight: 300
+		color: $white
+		line-height: 1.2
+		font-size: 20px
+		user-select: none
+		background-color: $blue
+		transition: background-color .3s, border-color .3s, color .3s
+		cursor: pointer
+		+sm
+			display: block
+		&:after
+			position: absolute
+			top: 50%
+			right: 41px
+			margin-top: -3px
+			vertical-align: top
+			width: 0
+			height: 0
+			border-width: 5px 5px 0
+			display: inline-block
+			width: 0
+			height: 0
+			margin-left: .255em
+			vertical-align: .255em
+			content: ""
+			border-top: .3em solid $white
+			border-right: .3em solid transparent
+			border-bottom: 0
+			border-left: .3em solid transparent
 	&__list
 		font-size: 0
+		+sm
+			opacity: 0
+			z-index: -1
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -180px
+			background-color: #fff
+			box-shadow: 0 6px 12px rgba(#000,.12)
+			margin: 0 15px
+			padding: 0
 	&__item
 		position: relative
 		display: inline-block
@@ -22,6 +68,10 @@
 		font-size: 20px
 		user-select: none
 		transition: background-color .3s, border-color .3s, color .3s
+		border-bottom: 0
+		+sm
+			display: block
+
 		&.is-active
 			border-color: $blue
 			background-color: $blue
@@ -33,7 +83,53 @@
 			color: $white
 		&:not(:first-child)
 			margin-left: -2px
+			+sm
+				margin-left: 0
+				margin-top: -2px
 	.order
 		&:last-child
 			margin-bottom: 65px
+.tabs-form
+	&__bottom
+		margin-top: 45px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+sm
+			flex-direction: column
+			margin-top: 0
+
+.callback
+	display: flex
+	+sm
+		order: 2
+		margin-top: 25px
+	&__icon
+		margin-top: 7px
+		margin-right: 23px
+		color: $blue
+		font-size: 70px
+	&__text
+		font-size: 17px
+		line-height: 1.117
+		p
+			max-width: 147px
+	&__tel
+		font-size: 25px
+		font-family: $circe
+		margin-bottom: 10px
+		line-height: 1.48
+.order-submit
+	display: flex
+	align-items: flex-start
+	margin-right: 65px
+	+sm
+		margin-right: 0
+	&__total
+		margin-left: 30px
+	&__text
+		font-family: $circe
+		font-size: 24px
+
+
 

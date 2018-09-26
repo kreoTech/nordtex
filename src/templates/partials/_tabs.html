@@ -8,7 +8,8 @@
 			{% for item in [
 				{
 					id: "orders",
-					text: "Мои заказы"
+					text: "Мои заказы",
+					active: true
 				},
 				{
 					id: "manager",
@@ -19,7 +20,7 @@
 					text: "Настройки"
 				}
 			] %}
-				<li class="tabs__item" data-tabs-control="{{ item.id }}">
+				<li class="tabs__item{%if active %} is-active{% endif %}" data-tabs-control="{{ item.id }}">
 					{{ item.text }}
 				</li>
 			{% endfor %}
@@ -83,11 +84,11 @@
 								<div class="manager__title up-text">
 									Персональный менеджер
 								</div>
-								<div class="manager__data">Николай Пупкин</div>
+								<div class="manager__data tabs-data">Николай Пупкин</div>
 								<div class="manager__title up-text">
 									Телефон
 								</div>
-								<div class="manager__digits"><a href="tel:8 800 555 35 35">8 800 555 35 35</a></div>
+								<div class="manager__digits tabs-digits"><a href="tel:8 800 555 35 35">8 800 555 35 35</a></div>
 								<a href="#" class="btn">Заказать звонок</a>
 							</div>
 						</div>
@@ -96,14 +97,63 @@
 								<div class="manager__title up-text">
 									Почта
 								</div>
-								<div class="manager__data"><a href="mailto:ulnv.vl@gmail.com">ulnv.vl@gmail.com</a></div>
+								<div class="manager__data tabs-data"><a href="mailto:ulnv.vl@gmail.com">ulnv.vl@gmail.com</a></div>
 								<div class="manager__title up-text">
 									Часы работы
 								</div>
-								<div class="manager__digits">09.00 - 18.00</div>
+								<div class="manager__digits tabs-digits">09.00 - 18.00</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tabs__container" data-tabs-container="settings">
+			<div class="tabs__inner inner">
+				<div class="settings">
+					<div class="row">
+						<div class="col col-33 col-md-50 col-xs-100">
+							<div class="settings__form">
+								<div class="form-group">
+									<span class="up-text up-text_sm">
+										Наш менеджер
+									</span>
+									<div class="settings__input form-input">
+										<input type="text" placeholder="Николай Пупкин" disabled>
+									</div>
+								</div>
+								<div class="form-group">
+									<span class="up-text up-text_sm">
+										Контактный телефон
+									</span>
+									<div class="settings__input form-input form-input_circe">
+										<input type="text" placeholder="8 800 555 35 35" disabled>
+									</div>
+								</div>
+								<div class="form-group">
+									<span class="up-text up-text_sm">
+										Почта
+									</span>
+									<div class="settings__input form-input">
+										<input type="text" placeholder="ulnv.vl@gmail.com" disabled>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-25 col-md-50 col-xs-100">
+							<div class="settings__info">
+								<div class="settings__title up-text">
+									Логин
+								</div>
+								<div class="settings__data tabs-data">unlv.vl@gmail.com</div>
+								<div class="settings__title up-text">
+									Пароль
+								</div>
+								<div class="settings__digits tabs-digits">61891265546</div>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="btn">Запросить изменние данных</a>
 				</div>
 			</div>
 		</div>

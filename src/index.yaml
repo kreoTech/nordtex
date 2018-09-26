@@ -7,3 +7,7 @@ PageList:
   ready: 100
 - file: cabinet.html
   ready: 100
+- file: cabinet-order.html
+  ready: 50
+- file: trade-marks.html
+  ready: 50

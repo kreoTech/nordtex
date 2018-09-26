@@ -1,0 +1,39 @@
+---
+title: trade-marks
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{% include "partials/_breadcrumbs.html" %}
+	<!-- begin topic -->
+	<div class="topic">
+		<div class="topic__inner topic__inner_horizontal inner">
+				<h2 class="topic__title topic__title_wm title">Торговые марки</h2>
+				<p>
+					Секрет стабильности наших позиций на рынке — в постоянном поиске новых возможностей. 
+	Мы сконцентрированы на непрерывном повышении эффективности бизнеса и сотрудников, 
+	оптимизации расходов и поиске нестандартных решений в разработке продукции. Это делает 
+	нашу компанию устойчивой к любым внешним вызовам и изменениям рынка.
+				</p>
+		</div>
+	</div>
+	<!-- end topic -->
+	<!-- begin items -->
+	<div class="items">
+		<div class="items__inner inner">
+			<div class="items__row row">
+				{% for i in range(0,7) %}
+				<div class="items__col col col-25 col-sm-33 col-xs-50">
+					{{ mixins.item() }}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- end items -->
+	{% include "partials/_pagination.html" %}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}
