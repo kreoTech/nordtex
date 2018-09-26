@@ -8,8 +8,12 @@ PageList:
 - file: cabinet.html
   ready: 100
 - file: cabinet-order.html
-  ready: 50
+  ready: 100
 - file: trade-marks.html
-  ready: 50
+  ready: 100
 - file: basket.html
+  ready: 100
+- file: news.html
+  ready: 50
+- file: partners.html
   ready: 50

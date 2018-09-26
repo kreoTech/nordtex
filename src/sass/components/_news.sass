@@ -1,0 +1,38 @@
+.news-item
+	display: flex
+	flex-direction: column
+	color: $black
+	font-weight: 300
+	font-size: 17px
+	line-height: 1.117
+	letter-spacing: .032em
+	box-shadow: 0 0 99px rgba($black, .07)
+	background-color: rgba($black, .03)
+	transition: background-color .3s
+	&:hover
+		background-color: $white
+	&__img
+		+xs
+			align-self: center
+		img
+			display: block
+			max-width: 100%
+	&__text
+		padding: 30px 30px 40px
+		+md
+			padding: 15px 0
+	&__title
+		font-size: 20px
+		font-weight: 300
+		line-height: 1.2
+		margin-bottom: 30px
+
+.news
+	padding: 69px 0 73px
+	+sm
+		padding: 25px 0
+	&__col
+		&:not(:last-child)
+			+sm
+				margin-bottom: 15px
+	

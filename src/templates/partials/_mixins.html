@@ -118,3 +118,44 @@
 	</div>
 </div>
 {% endmacro %}
+
+{% macro newsItem(props) %}
+	<a href="#" class="news-item">
+		<div class="news-item__img">
+			<img src="./img/{{ props.img }}" alt="img">
+		</div>
+		<div class="news-item__text">
+			<h6 class="news-item__title">
+				{{ props.title }}
+			</h6>
+			<p>
+				{{ props.text}}
+			</p>
+		</div>
+	</a>
+{% endmacro %}
+
+{% macro partnersOffer(props) %}
+	<a href="#" class="partners-offer">
+		<div class="partners-offer__img">
+			<img src="./img/{{ props.img }}" alt="img">
+		</div>
+		<div class="partners-offer__text">
+			<p>
+				{{ props.text }}
+			</p>
+		</div>
+	</a>
+{% endmacro %}
+
+{% macro partnersItem(props) %}
+<div class="partners-item row{% if props.reversed %} partners-item_rev{% endif %}">
+	<div class="partners-item__text col col-50 col-md-100">
+		<h4 class="patners-item__title partners-title">{{ props.title }}</h4>
+		<p>{{ props.text }}</p>
+	</div>
+	<div class="partners-item__img col col-50 col-md-100">
+		<img src="./img/{{ props.img }}" alt="img">
+	</div>
+</div>
+{% endmacro %}
