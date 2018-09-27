@@ -1,0 +1,126 @@
+.contacts
+	position: relative
+	&__map
+		width: 100%
+		height: 650px
+		+sm
+			height: 400px
+	&__wrap
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		pointer-events: none
+	&__inner
+		height: 100%
+	&__description
+		height: 100%
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		+sm
+			flex-direction: column
+			justify-content: flex-start
+			padding-top: 80px
+	&__details
+		display: flex
+		flex-direction: column
+		margin-top: 107px
+		padding: 41px 65px 44px 48px
+		background-color: $white
+		pointer-events: auto
+		+sm
+			padding: 15px
+			order: 1
+			margin-top: 0
+	&__details-item
+		+sm
+			font-size: 14px
+			padding-left: 19px
+		.icon
+			+sm
+				font-size: 10px
+				height: 12px
+		&:not(:last-child)
+			margin-bottom: 30px
+			+sm
+				margin-bottom: 15px
+	&__cities-wrap
+		position: relative
+		pointer-events: auto
+		max-width: 255px
+		+lg
+			margin-right: 40px
+		&.is-show
+			.contacts__cities
+				opacity: 1
+				z-index: 2
+	&__cities
+		padding: 31px 30px 21px
+		background-color: $gray
+		max-height: 650px
+		overflow: auto
+		line-height: 1.117
+		font-size: 17px
+		transition: opacity .3s
+		+md
+			position: absolute
+			opacity: 0
+			z-index: -1
+			top: 50px
+			right: 0
+			left: 0
+			// width: 255px
+	&__city
+		display: block
+		&:not(:last-child)
+			margin-bottom: 13px
+	&__link
+		color: $white
+		// font-size: 17px
+		font-weight: 200
+		display: block
+
+.current-city
+	position: relative
+	padding: 15px 30px
+	background-color: $gray
+	line-height: 1.117
+	font-size: 17px
+	cursor: pointer
+	color: $white
+	width: 255px
+	margin-top: 10px
+	display: none
+	+md
+		display: block
+	+sm
+		padding: 10px 15px
+		margin-bottom: 10px
+		width: 172px
+	&:after
+		position: absolute
+		top: 50%
+		right: 16px
+		margin-top: -3px
+		vertical-align: top
+		width: 0
+		height: 0
+		border-width: 5px 5px 0
+		display: inline-block
+		width: 0
+		height: 0
+		margin-left: .255em
+		vertical-align: .255em
+		content: ""
+		border-top: .3em solid $white
+		border-right: .3em solid transparent
+		border-bottom: 0
+		border-left: .3em solid transparent
+		+sm
+			right: 6px
+
+
+
+
