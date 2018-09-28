@@ -5,3 +5,4 @@ import './_map.js';
 import './_drop.js';
 import './_popup.js';
 import './_validation.js';
+import './_accordeon.js';

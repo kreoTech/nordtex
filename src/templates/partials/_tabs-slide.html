@@ -1,0 +1,43 @@
+<!-- begin tabs -->
+<div class="tabs-slide" data-tabs>
+		<div class="tabs-slide__out">
+			<div class="tabs-slide__current" data-tabs-current>
+				<span></span>
+			</div>
+			<ul class="tabs-slide__list">
+				{% for item in [
+					{
+						id: "cloth",
+						text: "ткань",
+						active: true
+					},
+					{
+						id: "style",
+						text: "стиль"
+					},
+					{
+						id: "control",
+						text: "контроль"
+					}
+				] %}
+					<li class="tabs-slide__item{%if active %} is-active{% endif %}" data-tabs-control="{{ item.id }}">
+						{{ item.text }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="tabs-slide__wrap" data-tabs-wrapper>
+			<div class="tabs-slide__container" data-tabs-container="cloth">
+				<div class="tabs-slide__inner">
+				</div>
+			</div>
+			<div class="tabs-slide__container" data-tabs-container="style">
+				<div class="tabs-slide__inner">
+				</div>
+			</div>
+			<div class="tabs-slide__container" data-tabs-container="control">
+				<div class="tabs-slide__inner">
+				</div>
+			</div>
+		</div>
+	</div>
