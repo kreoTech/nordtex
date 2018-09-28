@@ -1,0 +1,33 @@
+---
+title: cabinet-order
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{% include "partials/_breadcrumbs.html" %}
+	<!-- begin topic -->
+	<div class="topic topic_lg">
+		<div class="topic__inner inner">
+			<div class="topic__wrap">
+				<div class="topic__title-wrap">
+					<h2 class="topic__title topic__title_wm title">Заказ <span class="topic__number">№1245</span></h2>
+					<div class="topic__date">03.09.2018</div>
+				</div>
+				<!-- <div class="col col-50"> -->
+					<div class="topic__right">
+						<span class="up-text up-text_lg">
+							Статус
+						</span>
+						<span class="btn btn_blue">Выполнен</span>
+					</div>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+	<!-- end topic -->
+	{% include "partials/_tabs-order.html"%}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

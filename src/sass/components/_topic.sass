@@ -4,7 +4,59 @@
 	background-color: #F2F2F2 
 	+sm
 		padding: 28px 0 32px
+	&_lg
+		padding: 98px 0
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__inner
+		&_horizontal
+			display: flex
+			justify-content: space-between
+			align-items: center
+			+md
+				flex-direction: column
+			&:after
+				display: none
+			p
+				max-width: 631px
+				margin-left: 10px
 	&__title
 		margin-bottom: 30px 
 		+sm
 			margin-bottom: 15px
+		&_wm
+			margin-bottom: 0
+			+sm
+				margin-bottom: 0
+	&__subtitle
+		font-size: 30px
+		font-weight: 200
+		margin: 7px 0 18px
+		line-height: 1.2
+		color: $black
+		&_sm
+			font-size: 25px
+			font-weight: 300
+			margin: 0
+	&__text
+		color: $black
+		.col
+			&:not(:first-child)
+				+sm
+					margin-top: 15px
+	&__number
+		font-family: $circe
+		font-weight: 400
+		color: $black
+	&__date
+		font-size: 25px
+		font-weight: 300
+		font-family: $circe
+		+sm
+			font-size: 18px
+	&__right
+		.up-text
+			margin-bottom: 14px
+		

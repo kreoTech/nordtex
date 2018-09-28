@@ -1,0 +1,88 @@
+---
+title: partners
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{% include "partials/_breadcrumbs.html" %}
+	<!-- begin topic -->
+	<div class="topic">
+		<div class="topic__inner inner">
+			<h2 class="topic__title  topic__title_wm title">Партнерам</h2>
+		</div>
+	</div>
+	<!-- end topic -->
+	<!-- begin items -->
+	<div class="partners">
+		<div class="partners__inner inner">
+			<h4 class="partners__title partners-title">Специальные предложения для партнеров</h4>
+			<div class="partners__offers">
+				<div class="partners__row row">
+					{% for item in [
+						{
+							img: "s-a-r-a-h-s-h-a-r-p-973476-unsplash@2x.jpg",
+							text: "Став нашим партнером вам
+							будет доступен каталог
+							нашей продукции с ценами"
+						},
+						{
+							img: "roberto-nickson-g-803892-unsplash@2x.jpg",
+							text: "Став нашим партнером вам
+							будет доступен каталог
+							нашей продукции с ценами"
+						},
+						{
+							img: "kilarov-zaneit-973191-unsplash@2x.jpg",
+							text: "Став нашим партнером вам
+							будет доступен каталог
+							нашей продукции с ценами"
+						},
+						{
+							img: "vlad-smolyakov-972418-unsplash@2x.jpg",
+							text: "Став нашим партнером вам
+							будет доступен каталог
+							нашей продукции с ценами"
+						}
+					] %}
+					<div class="partners__col col col-25 col-sm-50 col-xs-100">
+						{{ mixins.partnersOffer(item) }}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="partners__news">
+				{% for item in [
+					{
+						img: "gonz-ddl-804125-unsplash.jpg",
+						title: "Что нового для наших партнеров",
+						text: "Секрет стабильности наших позиций на рынке — в постоянном поиске новых 
+						возможностей. Мы сконцентрированы на непрерывном повышении 
+						эффективности бизнеса и сотрудников,оптимизации расходов и поиске 
+						нестандартных решений в разработке продукции. Это делает нашу компанию 
+						устойчивой к любым внешним вызовам и изменениям рынка."
+					},
+					{
+						img: "joshua-rawson-harris-804523-unsplash.jpg",
+						title: "Стань и ты нашим партнером",
+						text: "Секрет стабильности наших позиций на рынке — в постоянном поиске новых 
+						возможностей. Мы сконцентрированы на непрерывном повышении 
+						эффективности бизнеса и сотрудников,оптимизации расходов и поиске 
+						нестандартных решений в разработке продукции. Это делает нашу компанию 
+						устойчивой к любым внешним вызовам и изменениям рынка.",
+						reversed: true
+					}
+				] %}
+					{{ mixins.partnersItem(item) }}
+				{% endfor %}
+			</div>
+			<div class="partners__btn">
+				<a href="#" class="btn">Стань партнером</a>
+			</div>
+		</div>
+	</div>
+	<!-- end items -->
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

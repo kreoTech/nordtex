@@ -1,0 +1,22 @@
+---
+title: basket
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{% include "partials/_breadcrumbs.html" %}
+	<!-- begin topic -->
+	<div class="topic topic_lg">
+		<div class="topic__inner inner">
+			<h2 class="topic__title topic__title_wm title">Ваша корзина</h2>
+			<h5 class="topic__subtitle topic__subtitle_sm">Заказ №1245</h5>
+		</div>
+	</div>
+	<!-- end topic -->
+	{% include "partials/_tabs-basket.html"%}
+	{% include "partials/_footer.html" %}
+	{% include "partials/_modals.html" %}
+
+{% endblock %}

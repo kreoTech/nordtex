@@ -1,0 +1,150 @@
+<!-- begin tabs -->
+<div class="tabs" data-tabs>
+		<div class="tabs__out">
+			<div class="tabs__current" data-tabs-current>
+				<span></span>
+			</div>
+			<ul class="tabs__list inner">
+				{% for item in [
+					{
+						id: "orders",
+						text: "Мои заказы",
+						active: true
+					},
+					{
+						id: "manager",
+						text: "Мой менеджер"
+					},
+					{
+						id: "settings",
+						text: "Настройки"
+					}
+				] %}
+					<li class="tabs__item{%if active %} is-active{% endif %}" data-tabs-control="{{ item.id }}">
+						{{ item.text }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="tabs__wrap" data-tabs-wrapper>
+			<div class="tabs__container" data-tabs-container="orders">
+				<div class="tabs__inner inner">
+					<form class="tabs-form">
+						<div class="tabs-form__orders-wrap">
+							{% for item in [1,2,3] %}
+								{{ mixins.orderItem() }}
+							{% endfor %}
+						</div>
+						<div class="tabs-form__bottom">
+							<div class="callback">
+								<div class="callback__icon">{{ mixins.icon("Bookmark") }}</div>
+								<div class="callback__text">
+									<div class="callback__tel">8 800 555 35 35</div>
+									<p>
+										Если у Вас остались
+										вопросы позвоните нам
+									</p>
+								</div>
+							</div>
+							{{ mixins.orderSubmit("Оформить заказ") }}
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="tabs__container" data-tabs-container="manager">
+				<div class="tabs__inner inner">
+					<div class="manager">
+						<div class="row">
+							<div class="col col-33 col-md-100">
+								<div class="manager__avatar">
+									<div class="manager__img">
+										<img src="https://via.placeholder.com/255x255" alt="img">
+									</div>
+									<div class="manager__social">
+										<ul class="soc">
+											<li class="soc__item"><a href="#" target="_blank" class="soc__link">{{ mixins.icon('twitter') }}</a></li>
+											<li class="soc__item"><a href="#" target="_blank" class="soc__link">{{ mixins.icon('facebook') }}</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col col-25 col-md-50">
+								<div class="manager__info manager__info_left">
+									<div class="manager__title up-text">
+										Персональный менеджер
+									</div>
+									<div class="manager__data tabs-data">Николай Пупкин</div>
+									<div class="manager__title up-text">
+										Телефон
+									</div>
+									<div class="manager__digits tabs-digits"><a href="tel:8 800 555 35 35">8 800 555 35 35</a></div>
+									<a href="#" class="btn">Заказать звонок</a>
+								</div>
+							</div>
+							<div class="col col-25 col-md-50">
+								<div class="manager__info">
+									<div class="manager__title up-text">
+										Почта
+									</div>
+									<div class="manager__data tabs-data"><a href="mailto:ulnv.vl@gmail.com">ulnv.vl@gmail.com</a></div>
+									<div class="manager__title up-text">
+										Часы работы
+									</div>
+									<div class="manager__digits tabs-digits">09.00 - 18.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tabs__container" data-tabs-container="settings">
+				<div class="tabs__inner inner">
+					<div class="settings">
+						<div class="row">
+							<div class="col col-33 col-md-50 col-xs-100">
+								<div class="settings__form">
+									<div class="form-group">
+										<span class="up-text up-text_sm">
+											Наш менеджер
+										</span>
+										<div class="settings__input form-input">
+											<input type="text" placeholder="Николай Пупкин" disabled>
+										</div>
+									</div>
+									<div class="form-group">
+										<span class="up-text up-text_sm">
+											Контактный телефон
+										</span>
+										<div class="settings__input form-input form-input_circe">
+											<input type="text" placeholder="8 800 555 35 35" disabled>
+										</div>
+									</div>
+									<div class="form-group">
+										<span class="up-text up-text_sm">
+											Почта
+										</span>
+										<div class="settings__input form-input">
+											<input type="text" placeholder="ulnv.vl@gmail.com" disabled>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col-25 col-md-50 col-xs-100">
+								<div class="settings__info">
+									<div class="settings__title up-text">
+										Логин
+									</div>
+									<div class="settings__data tabs-data">unlv.vl@gmail.com</div>
+									<div class="settings__title up-text">
+										Пароль
+									</div>
+									<div class="settings__digits tabs-digits">61891265546</div>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="btn">Запросить изменние данных</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

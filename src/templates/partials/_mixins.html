@@ -15,3 +15,147 @@
 </a>
 <!-- end item -->
 {% endmacro %}
+
+{% macro order(props) %}
+	<div class="order">
+		<div class="row">
+			<div class="col col-25 col-sm-33 col-xs-100">
+				<div class="order__start">
+					<button class="order__btn">
+						{{ icon("cancel") }}
+					</button>
+					<span class="order__number">
+						Заказ №1245
+					</span>
+				</div>
+			</div>
+			<div class="col col-25 col-sm-33">
+				<span class="up-text up-text_sm">
+					Дата
+				</span>
+				<div class="order__text">
+					28.09.2018
+				</div>
+			</div>
+			<div class="col col-16 col-sm-33">
+				<span class="up-text up-text_sm">
+					На сумму
+				</span>
+				<div class="order__text">
+					37 500 Р
+				</div>
+			</div>
+			<div class="col col-16 col-sm-50">
+				<span class="btn btn_{{ props.color }}{% if props.type %} btn_{{ props.type }}{% endif %}">{{ props.text }}</span>
+			</div>
+			<div class="col col-16 col-md-50">
+				<a href="#" class="btn">Повторить заказ</a>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro orderItem() %}
+	<div class="order-item">
+		<div class="row">
+			<div class="col col-16 col-sm-50 col-xs-100 order-item__col">
+				<div class="order-item__start">
+					<button class="order-item__btn">
+						{{ icon("cancel") }}
+					</button>
+					<div class="order-item__img">
+						<img src="https://via.placeholder.com/255x255" alt="img">
+					</div>
+				</div>
+			</div>
+			<div class="col col-25 col-sm-50 col-xs-100 order-item__col">
+				<span class="up-text up-text_sm">
+					LoveMe - шторы
+				</span>
+				<div class="order-item__number">
+					Название цвета
+				</div>
+			</div>
+			<div class="col col-16 col-sm-33 col-xs-100 order-item__col">
+				<span class="up-text up-text_sm">
+					Цена/шт
+				</span>
+				<div class="order-item__text">
+					1 500 Р
+				</div>
+			</div>
+			<div class="col col-25 col-sm-33 col-xs-100 order-item__col">
+				<span class="up-text up-text_sm">
+					Введите количество
+				</span>
+				<div class="order-item__input">
+					<input type="text" placeholder="25" disabled>
+				</div>
+				<span class="order-item__units">шт</span>
+			</div>
+			<div class="col col-16 col-sm-33 col-xs-100 order-item__col">
+				<span class="up-text up-text_sm">
+					Итого
+				</span>
+				<div class="order-item__text">
+					37 500 Р
+				</div>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro orderSubmit(text) %}
+<div class="order-submit">
+	<button class="btn" type="submit">{{ text }}</button>
+	<div class="order-submit__total">
+		<span class="up-text up-text_sm">
+			Итого
+		</span>
+		<div class="order-submit__text">
+			112 500 Р
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro newsItem(props) %}
+	<a href="#" class="news-item">
+		<div class="news-item__img">
+			<img src="./img/{{ props.img }}" alt="img">
+		</div>
+		<div class="news-item__text">
+			<h6 class="news-item__title">
+				{{ props.title }}
+			</h6>
+			<p>
+				{{ props.text}}
+			</p>
+		</div>
+	</a>
+{% endmacro %}
+
+{% macro partnersOffer(props) %}
+	<a href="#" class="partners-offer">
+		<div class="partners-offer__img">
+			<img src="./img/{{ props.img }}" alt="img">
+		</div>
+		<div class="partners-offer__text">
+			<p>
+				{{ props.text }}
+			</p>
+		</div>
+	</a>
+{% endmacro %}
+
+{% macro partnersItem(props) %}
+<div class="partners-item row{% if props.reversed %} partners-item_rev{% endif %}">
+	<div class="partners-item__text col col-50 col-md-100">
+		<h4 class="patners-item__title partners-title">{{ props.title }}</h4>
+		<p>{{ props.text }}</p>
+	</div>
+	<div class="partners-item__img col col-50 col-md-100">
+		<img src="./img/{{ props.img }}" alt="img">
+	</div>
+</div>
+{% endmacro %}

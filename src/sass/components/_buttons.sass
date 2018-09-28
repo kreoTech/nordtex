@@ -28,6 +28,31 @@
 		+hover
 			color: $white 
 			background-color: $blue
+	&_blue
+		color: $white
+		background-color: $blue
+		box-shadow: 0 10px 20px rgba($blue, .28) 
+		+hover
+			color: $white
+			background-color: $blue
+	&_transparent
+		background-color: transparent
+		color: $textGray
+		+hover
+			background-color: transparent
+			color: $textGray
+	&_bordered
+		border: 2px solid $borderGray
+		box-shadow: none
+		padding: 6px 24px 10px
+	&_gray
+		background-color: $borderGray
+		box-shadow: 0 10px 20px rgba($black, .12)
+		color: $textGray
+		+hover
+			background-color: $borderGray
+			box-shadow: 0 10px 20px rgba($black, .12)
+			color: $textGray
 	.icon-arrow-next
 		margin-left: 24px
 		font-size: 10px

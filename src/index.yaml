@@ -5,3 +5,17 @@ PageList:
   ready: 100
 - file: 4-14.html
   ready: 100
+- file: cabinet.html
+  ready: 100
+- file: cabinet-order.html
+  ready: 100
+- file: trade-marks.html
+  ready: 100
+- file: basket.html
+  ready: 100
+- file: news.html
+  ready: 50
+- file: partners.html
+  ready: 50
+- file: contacts.html
+  ready: 50

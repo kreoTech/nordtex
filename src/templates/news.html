@@ -1,0 +1,69 @@
+---
+title: news
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{% include "partials/_breadcrumbs.html" %}
+	<!-- begin topic -->
+	<div class="topic">
+		<div class="topic__inner inner">
+			<h2 class="topic__title  topic__title_wm title">Новости</h2>
+		</div>
+	</div>
+	<!-- end topic -->
+	<!-- begin items -->
+	<div class="news">
+		<div class="news__inner inner">
+			<div class="news__row row">
+				{% for item in [
+					{
+						img: "Lotus.jpg",
+						title: "Коллекция штор пополнилась новыми 
+						видами продукции",
+						text: "Проект «Рогожка» стартовал менее года назад, 
+						но уже стал одним из самых успешных
+						 в категории «Домашний текстиль». Ткань, 
+						имитирующая лён, была разработана нашими 
+						специалистами на предприятии 
+						«Родники-текстиль» и стала настоящим 
+						драйвером для нового направления «Шторы»."
+					},
+					{
+						img: "helicopter.jpg",
+						title: "Вертолётный «Кубок Мира» – снова наш!",
+						text: "Проект «Рогожка» стартовал менее года назад, 
+						но уже стал одним из самых успешных
+						 в категории «Домашний текстиль». Ткань, 
+						имитирующая лён, была разработана нашими 
+						специалистами на предприятии 
+						«Родники-текстиль» и стала настоящим 
+						драйвером для нового направления «Шторы»."
+					},
+					{
+						img: "7U3A9969.jpg",
+						title: "Марке Verossa вручена премия RUSSIAN
+						DESIGNERS AWARDS 2018",
+						text: "Проект «Рогожка» стартовал менее года назад, 
+						но уже стал одним из самых успешных
+						 в категории «Домашний текстиль». Ткань, 
+						имитирующая лён, была разработана нашими 
+						специалистами на предприятии 
+						«Родники-текстиль» и стала настоящим 
+						драйвером для нового направления «Шторы»."
+					}
+				] %}
+				<div class="news__col col col-33 col-sm-50 col-xs-100">
+					{{ mixins.newsItem(item) }}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- end items -->
+	{% include "partials/_pagination.html" %}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

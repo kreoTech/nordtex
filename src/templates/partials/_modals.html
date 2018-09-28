@@ -1,0 +1,91 @@
+
+
+<div class="modal login" data-modal="login">
+	<div class="modal__container login__container" data-modal-container>
+		<div class="modal__inner login__inner">
+			<button class="modal__close login__close" data-modal-close>
+				{{mixins.icon('close')}}
+			</button>
+			<h3 class="login__title title-modal">Войти в личный кабинет</h3>
+			<form class="modal-form" id="1">
+				<div class="modal-form-group">
+					<div class="modal-error">{{mixins.icon('close-button')}}<span>Неверный логин или пароль</span></div>
+					<div class="modal-input modal-input_icon">
+						<div class="modal-input__icon">{{ mixins.icon("user") }}</div>
+						<input type="text" placeholder="Логин" data-validation="required">
+					</div>
+					<div class="modal-input modal-input_icon">
+						<div class="modal-input__icon">{{ mixins.icon("lock") }}</div>
+						<input type="password" placeholder="Пароль" data-validation="required">
+					</div>
+				</div>
+				<label class="modal-checkbox">
+					<input type="checkbox">
+					<span>Я соглашаюсь с уловиями обработки данных</span>
+					<span class="modal-checkbox__check">{{ mixins.icon('check') }}</span>
+				</label>
+				<a href="" class="modal-link">Уловия обработки данных</a>
+				<div class="modal-btn">
+					<button class="btn" type="submit">Войти</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal login-partner" data-modal="partner">
+	<div class="modal__container login-partner__container" data-modal-container>
+		<div class="modal__inner login-partner__inner">
+			<button class="modal__close login-partner__close" data-modal-close>
+				{{mixins.icon('close')}}
+			</button>
+			<h3 class="login-partner__title title-modal">Станьте нашим партнером</h3>
+			<form class="modal-form" id="2">
+				<div class="modal-form-group">
+					<div class="modal-error">{{mixins.icon('close-button')}}<span>Неверный логин или пароль</span></div>
+					{% for i in [
+						"Введите название организации",
+						"Регион деятельности",
+						"Тип деятельности",
+						"Контактное лицо",
+						"Контактный телефон"
+					] %}
+						<div class="modal-input">
+							<input type="text" placeholder="{{i}}" data-validation="required">
+						</div>
+					{% endfor %}
+				</div>
+				<div class="modal-btn">
+					<button class="btn" type="submit">Отправить заявку</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal partner-thank" data-modal="partner-thank">
+	<div class="modal__container partner-thank__container" data-modal-container>
+		<div class="modal__inner partner-thank__inner">
+			<button class="modal__close partner-thank__close" data-modal-close>
+				{{mixins.icon('close')}}
+			</button>
+			<h3 class="partner-thank__title title-modal">Cпасибо за Вашу заявку!</h3>
+			<span class="modal-message">Мы обработаем ее в ближайшее время </span>
+		</div>
+	</div>
+</div>
+
+<div class="modal order-thank" data-modal="order-thank">
+		<div class="modal__container order-thank__container" data-modal-container>
+			<div class="modal__inner order-thank__inner">
+				<button class="modal__close order-thank__close" data-modal-close>
+					{{mixins.icon('close')}}
+				</button>
+				<h3 class="order-thank__title title">Спасибо за Ваш заказ!</h3>
+				<span class="modal-message modal-message_lg">Мы обработаем ее в ближайшее время </span>
+				<div class="order-thank__number">Заказ №1245</div>
+				<div class="order-thank__date">Дата: 04.09.2018</div>
+				<div class="order-thank__status"><span class="up-text">Статус</span><span class="btn btn_gray">В обработке</span></div>
+			</div>
+		</div>
+	</div>

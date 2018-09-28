@@ -1,0 +1,187 @@
+[data-modal]
+	position: fixed
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	background-color: rgba($black,.7)
+	user-select: none
+	+vertical
+	+gpu
+	overflow: auto
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	&.is-open
+		opacity: 1
+		visibility: visible
+		z-index: 100
+		
+[data-modal-container]
+	position: relative
+	z-index: 1
+	font-size: 12px
+	font-family: $yanone
+	font-weight: 300
+	vertical-align: middle
+	display: inline-block
+	max-width: 380px
+	width: 100%
+	padding: 0 15px
+[data-modal-close]
+	position: absolute
+	top: 20px
+	right: 35px
+	background-color: transparent
+	font-size: 0
+	.icon
+		font-size: 10px
+
+.modal
+	&__inner
+		padding: 58px 48px 42px
+		max-width: 100%
+		background-color: $white
+		+xs
+			padding: 45px 15px
+
+.modal-form
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	justify-content: center
+	margin-top: 40px
+	color: #929292
+	+xs
+		margin-top: 20px
+	&.novalidate
+		.modal-error
+			display: flex
+.modal-form-group
+	width: 100%
+	text-align: left
+	&:not(:last-child)
+		margin-bottom: 16px
+.modal-input
+	position: relative
+	.form-error
+		display: none
+	&:not(:last-child)
+		margin-bottom: 8px
+	input
+		width: 100%
+		font-size: 12px
+		font-family: $yanone
+		font-weight: 300
+		padding: 13px 18px 11px
+		border: 2px solid #C8C8C8
+		&:focus
+			+placeholder
+				font-size: 0
+	&__icon
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 13px
+		.icon
+			display: block
+			font-size: 13px
+	&.has-error
+		color: #E29191
+		// & .modal-error
+		// 	display: flex
+		input
+			color: #E29191
+			border-color: #E29191
+			+placeholder
+				color: #E29191
+	&_icon
+		input
+			padding-left: 38px
+.modal-checkbox
+	position: relative
+	padding-left: 21px
+	margin-left: 14px
+	text-align: left
+	&:before
+		content: ""
+		position: absolute
+		width: 14px
+		height: 14px
+		top: 0
+		left: 0
+		border: 2px solid #C8C8C8
+	input
+		position: absolute
+		opacity: 0
+		z-index: -1
+		&:checked
+			& ~ .modal-checkbox__check
+				opacity: 1
+	&__check
+		position: absolute
+		left: 2px
+		top: 3px
+		font-size: 8px
+		opacity: 0
+		transition: opacity .3s
+		.icon
+			display: block
+.modal-link
+	text-decoration: none
+	color: #929292
+	margin: 13px 0 0 14px
+	border-bottom: 1px solid rgba($darkGray,.2)
+	line-height: 1.166
+.modal-btn
+	margin: 0 auto
+	margin-top: 21px
+	text-align: center
+.modal-error
+	margin: 0 0 11px 14px
+	vertical-align: middle
+	line-height: 1.1666
+	display: flex
+	align-items: center
+	color: #E29191
+	display: none
+	.icon
+		margin-right: 11px
+
+.modal-message
+	line-height: 1.166
+	margin-top: 8px
+	color: #929292
+	display: block
+	&_lg
+		font-size: 25px
+		+sm
+			font-size: 18px
+
+.order-thank
+	&__container
+		max-width: 730px
+	&__number
+		margin-top: 78px
+		font-size: 40px
+		font-weight: 200
+		+md
+			margin-top: 30px
+		+sm
+			font-size: 20px
+			margin-top: 20px
+	&__date
+		font-size: 25px
+		margin-top: 48px
+		+md
+			margin-top: 25px
+		+sm
+			font-size: 16px
+			margin-top: 15px
+	&__status
+		margin-top: 30px
+		+sm
+			margin-top: 15px
+		.up-text
+			margin-bottom: 7px
