@@ -128,9 +128,11 @@
 			<h6 class="news-item__title">
 				{{ props.title }}
 			</h6>
+			{% if props.text %}
 			<p>
 				{{ props.text}}
 			</p>
+			{% endif %}
 		</div>
 	</a>
 {% endmacro %}

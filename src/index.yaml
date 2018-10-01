@@ -21,3 +21,5 @@ PageList:
   ready: 50
 - file: brand.html
   ready: 50
+- file: home.html
+  ready: 50

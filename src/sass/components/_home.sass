@@ -1,0 +1,148 @@
+.home
+	&__top
+		padding: 185px 0
+		text-align: center
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+	&__title
+		font-size: 62px
+		letter-spacing: 0.034em
+		margin-bottom: 26px
+		font-weight: 400
+		line-height: 1.193
+	&__subtitle
+		font-size: 27px
+		font-weight: 200
+		margin-bottom: 57px
+		line-height: 1.185
+	&__about
+		padding: 111px 0
+		background-color: #F2F2F2
+	&__text
+		padding: 47px 0 0
+		font-size: 17px
+		letter-spacing: 0.034em
+		line-height: 1.765
+		max-width: 530px
+		p
+			&:not(:last-child)
+				margin-bottom: 30px
+	&__img
+		img
+			display: block
+			max-width: 100%
+	&__news
+		padding: 65px 0 42px
+		text-align: center
+	&__news-wrap
+		padding: 67px 0 29px
+		text-align: left
+		.news-item__text
+			padding-bottom: 20px
+	&__offer
+		padding: 116px 0 125px
+		background-color: #F2F2F2
+
+.home-offer
+	&__form
+		padding: 37px 48px 25px
+		background-color: $white
+	&__title-sm
+		padding-left: 95px
+		+sm
+			padding-left: 0
+	&__text
+		padding-left: 95px
+		font-size: 17px
+		line-height: 1.765
+		max-width: 580px
+		letter-spacing: 0.034em
+		+sm
+			padding-left: 0
+		p
+			padding: 37px 0
+	&__item
+		position: relative
+		padding-left: 31px
+		font-weight: 200
+		line-height: 1
+		&:not(:last-child)
+			margin-bottom: 12px
+		&:before
+			content: ""
+			position: absolute
+			width: 14px
+			height: 3px
+			border-radius: 115px
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			background-color: #C8C8C8
+
+
+.home-form
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	justify-content: center
+	margin-top: 32px
+	color: #929292
+	+xs
+		margin-top: 20px
+	&.novalidate
+		.home-error
+			display: flex
+.home-form-group
+	width: 100%
+	text-align: left
+	&:not(:last-child)
+		margin-bottom: 16px
+.home-input
+	position: relative
+	.form-error
+		display: none
+	&:not(:last-child)
+		margin-bottom: 8px
+	input
+		width: 100%
+		font-size: 12px
+		font-family: $yanone
+		font-weight: 300
+		padding: 13px 18px 11px
+		border: 2px solid #C8C8C8
+		&:focus
+			+placeholder
+				font-size: 0
+	&__icon
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 13px
+		.icon
+			display: block
+			font-size: 13px
+	&.has-error
+		color: #E29191
+		// & .modal-error
+		// 	display: flex
+		input
+			color: #E29191
+			border-color: #E29191
+			+placeholder
+				color: #E29191
+	&_icon
+		input
+			padding-left: 38px
+.home-btn
+	margin-top: 26px
+.home-error
+	margin: 0 0 11px 14px
+	vertical-align: middle
+	line-height: 1.1666
+	display: flex
+	align-items: center
+	color: #E29191
+	display: none
+	.icon
+		margin-right: 11px

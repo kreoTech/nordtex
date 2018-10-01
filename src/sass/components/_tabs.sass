@@ -133,5 +133,92 @@
 		font-family: $circe
 		font-size: 24px
 
+.tabs-slide
+	margin-top: 50px
+	&.is-open
+		.tabs-slide__list
+			opacity: 1
+			z-index: 2
+	&__out
+		position: relative
+	&__current
+		display: none
+		font-weight: 300
+		color: $black
+		line-height: 1.2
+		font-size: 20px
+		font-weight: 700
+		user-select: none
+		// background-color: $blue
+		transition: background-color .3s, border-color .3s, color .3s
+		cursor: pointer
+		text-transform: uppercase
+		+sm
+			display: block
+		&:after
+			position: absolute
+			top: 50%
+			right: 15px
+			margin-top: -3px
+			vertical-align: top
+			width: 0
+			height: 0
+			border-width: 5px 5px 0
+			display: inline-block
+			width: 0
+			height: 0
+			margin-left: .255em
+			vertical-align: .255em
+			content: ""
+			border-top: .3em solid $black
+			border-right: .3em solid transparent
+			border-bottom: 0
+			border-left: .3em solid transparent
+	&__list
+		font-size: 0
+		+sm
+			opacity: 0
+			z-index: -1
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -90px
+			background-color: #fff
+			box-shadow: 0 6px 12px rgba(#000,.12)
+			// margin: 0 15px
+			padding: 0
+		+xs
+			padding: 0
+	&__item
+		position: relative
+		display: inline-block
+		padding: 0
+		font-weight: 700
+		color: rgba($black,.5)
+		line-height: 1.55
+		font-size: 20px
+		user-select: none
+		transition: color .3s
+		text-transform: uppercase
+		+sm
+			display: block
+		&:not(:last-child)
+			margin-right: 40px
+		&.is-active
+			color: $black
+			z-index: 1
+		&:hover
+			color: $black
+		&:not(:first-child)
+			margin-left: -2px
+			+sm
+				margin-left: 0
+				margin-top: -2px
+	&__inner
+		padding-top: 18px
+		line-height: 1.2
+		color: rgba($black,.5)
+
+
 
 

@@ -1,0 +1,123 @@
+<div class="home">
+	<div class="home__top" style="background-image: url(../img/sylvie-tittel-741993-unsplash.jpg);">
+		<div class="home__inner inner">
+			<h2 class="home__title">Нордтекс - лидер текстильного рынка России</h2>
+			<h4 class="home__subtitle">У нас Вы найдете качественный текстиль для Вашего дома и не только</h4>
+			<a href="" class="btn">Перейти в каталог</a>
+		</div>
+	</div>
+	<div class="home__about">
+		<div class="home__inner inner">
+			<div class="row">
+				<div class="col col-58 col-sm-100">
+					<h3 class="home__title-sm title-sm">Пару слов о нас</h3>
+					<div class="home__text">
+						<p>
+							Группа компаний «Нордтекс» — один из лидеров текстильного рынка России и самая 
+							стабильная компания отрасли.								
+						</p>
+						<p>
+							Мы работаем на рынке с 1992 года и создали собственную формулу 
+							успеха — современное производство, отличная продукция, лучшая команда 
+							сотрудников.
+						</p>
+						<p>
+							Наша специализация — ткани, спецодежда и домашний текстиль собственного производства.
+						</p>
+						<p>
+							Все производство от ткачества до пошива готовой продукции ведется 
+							на предприятиях «Нордтекс». Это обеспечивает контроль качества над всеми 
+							стадиями производственного процесса.
+						</p>
+					</div>
+				</div>
+				<div class="col col-41 col-sm-100">
+					<div class="home__img">
+						<img src="./img/karolina-szczur-504624-unsplash.jpg" alt="img">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home__news">
+		<div class="home__inner inner">
+			<div class="home__title-sm title-sm">
+				Новости
+			</div>
+			<div class="row home__news-wrap">
+				{% for item in [
+					{
+						img: "divjot-ratra-698428-unsplash.jpg",
+						title: "Марке Verossa вручена премия RUSSIAN
+						DESIGNERS AWARDS 2018"
+					},
+					{
+						img: "rhema-kallianpur-560711-unsplash.jpg",
+						title: "Вертолётный «Кубок Мира» – снова наш!"
+					},
+					{
+						img: "7U3A9969.jpg",
+						title: "Марке Verossa вручена премия RUSSIAN
+						DESIGNERS AWARDS 2018"
+					},
+					{
+						img: "helicopter.jpg",
+						title: "Вертолётный «Кубок Мира» – снова наш!"
+					}
+				] %}
+				<div class="news__col col col-25 col-sm-50 col-xs-100">
+					{{ mixins.newsItem(item) }}
+				</div>
+				{% endfor %}
+			</div>
+			<a href="#" class="btn">Читать все новости</a>
+		</div>
+	</div>
+	<div class="home__offer home-offer">
+		<div class="home__inner inner">
+			<div class="row">
+				<div class="col col-33 col-sm-100 sm-order2">
+					<div class="home-offer__form">
+						<h5 class="title-modal">Станьте нашим партнером</h5>
+						<form class="home-form">
+							<div class="home-form-group">
+								<div class="home-error">{{mixins.icon('close-button')}}<span>Неверный логин или пароль</span></div>
+								{% for i in [
+									"Введите название организации",
+									"Регион деятельности",
+									"Тип деятельности",
+									"Контактное лицо",
+									"Контактный телефон"
+								] %}
+									<div class="home-input">
+										<input type="text" placeholder="{{i}}" data-validation="required">
+									</div>
+								{% endfor %}
+							</div>
+							<div class="home-btn">
+								<button class="btn" type="submit">Отправить заявку</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col col-66 col-sm-100">
+					<h3 class="home-offer__title-sm title-sm">Специальные предложения для партнеров</h3>
+					<div class="home-offer__text">
+						<p>
+							Секрет стабильности наших позиций на рынке — в постоянном поиске новых 
+							возможностей. Мы сконцентрированы на непрерывном повышении 
+							эффективности бизнеса и сотрудников,оптимизации расходов и поиске 
+							нестандартных решений в разработке продукции. Это делает нашу компанию 
+							устойчивой к любым внешним вызовам и изменениям рынка.
+						</p>
+						<ul class="home-offer__list">
+							{% for i in [1,2,3,4] %}
+								<li class="home-offer__item">Став нашим партнером, Вам будет доступен каталог со всеми ценами</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
