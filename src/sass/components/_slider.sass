@@ -2,6 +2,8 @@
 	position: relative
 	height: 679px 
 	overflow: hidden
+	+md
+		height: 596px
 	+xs
 		height: auto
 	&_high
@@ -15,12 +17,16 @@
 		z-index: 2
 		padding-top: 110px
 		pointer-events: none
+		+md
+			padding-top: 79px
 		+xs
-			position: relative
-			padding: 0
-			margin: 0 -15px
+			// position: relative
+			padding-top: 53px
+			// margin: 0 -15px
 	&__wind
 		float: right
+		+xs
+			float: none
 	&__wind-abs
 		position: absolute
 		top: 0
@@ -36,7 +42,8 @@
 	+r(700)
 		margin-right: 0
 	+xs
-		width: 100%
+		// width: 100%
+		margin: 0 auto
 	&__head
 		padding: 25px 33px
 	&__title
@@ -162,9 +169,12 @@
 		padding: 89px 0
 		height: 679px 
 		+vertical
+		+md
+			height: 596px
+			padding: 33px 0
 		+xs
-			padding: 15px 0
-			height: 520px
+			padding: 44px 0
+			height: 779px
 	&__slide-50
 		position: relative
 		height: 785px
@@ -193,10 +203,16 @@
 		+md
 			max-width: 320px
 		+xs
-			max-width: 100%
+			max-width: 255px
+			padding: 20px 15px 20px 27px
+			margin: 0 auto
+			font-size: 13px
 	&__title
 		margin-bottom: 10px
 		+f(20px,300,1.2)
+		+xs
+			font-size: 15px
+			margin-bottom: 20px
 		&_lg
 			font-size: 30px
 	&__footer

@@ -6,3 +6,4 @@ import './_drop.js';
 import './_popup.js';
 import './_validation.js';
 import './_accordeon.js';
+import './_sandwich.js';

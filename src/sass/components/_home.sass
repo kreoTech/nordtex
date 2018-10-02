@@ -5,63 +5,109 @@
 		background-size: cover
 		background-position: center
 		background-repeat: no-repeat
+		+xs
+			padding: 100px 0
 	&__title
 		font-size: 62px
 		letter-spacing: 0.034em
 		margin-bottom: 26px
 		font-weight: 400
 		line-height: 1.193
+		+md
+			font-size: 40px
+		+sm
+			font-size: 34px
 	&__subtitle
 		font-size: 27px
 		font-weight: 200
 		margin-bottom: 57px
 		line-height: 1.185
+		+sm
+			font-size: 20px
 	&__about
 		padding: 111px 0
 		background-color: #F2F2F2
+		+md
+			padding: 50px 0
+			text-align: center
+		+sm
+			padding: 25px 0
 	&__text
 		padding: 47px 0 0
 		font-size: 17px
 		letter-spacing: 0.034em
 		line-height: 1.765
 		max-width: 530px
+		+md
+			margin: 0 auto
+		+sm
+			padding-top: 20px
 		p
 			&:not(:last-child)
 				margin-bottom: 30px
+				+sm
+					margin-bottom: 15px
 	&__img
+		+md
+			display: flex
+			justify-content: center
+			margin-top: 30px
 		img
 			display: block
 			max-width: 100%
 	&__news
 		padding: 65px 0 42px
 		text-align: center
+		+md
+			padding-top: 50px
+		+sm
+			padding: 25px 0
 	&__news-wrap
 		padding: 67px 0 29px
 		text-align: left
+		+md
+			padding-top: 30px
+		+xs
+			text-align: center
 		.news-item__text
 			padding-bottom: 20px
 	&__offer
 		padding: 116px 0 125px
 		background-color: #F2F2F2
+		+md
+			padding: 50px 0
+		+sm
+			padding: 25px 0
 
 .home-offer
 	&__form
 		padding: 37px 48px 25px
 		background-color: $white
+		+xs
+			padding: 20px 15px
 	&__title-sm
 		padding-left: 95px
+		+md
+			padding-left: 0
 		+sm
 			padding-left: 0
+			text-align: center
 	&__text
 		padding-left: 95px
 		font-size: 17px
 		line-height: 1.765
 		max-width: 580px
 		letter-spacing: 0.034em
+		+md
+			padding-left: 0
+			line-height: 1.2
 		+sm
 			padding-left: 0
+			margin-bottom: 25px
 		p
 			padding: 37px 0
+			+md
+				padding: 15px 0
 	&__item
 		position: relative
 		padding-left: 31px

@@ -1,20 +1,171 @@
+// .header
+// 	padding-bottom: 22px
+// 	background-color: $white 
+// 	+xs
+// 		padding-bottom: 15px
+// 	&__left
+// 		float: left
+// 	&__right
+// 		float: right
+// 		margin-top: 25px
+// 		+xs
+// 			margin-top: 15px
+
+// .logo
+// 	color: $black 
+// 	vertical-align: top
+// 	display: inline-block
+// 	.header &
+// 		margin-top: 26px
+// 		+xs
+// 			margin-top: 17px 
+// 	&_white
+// 		color: $white 
+// 	&__text
+// 		font-family: $yanone
+// 		+f(30px,700,1.2) 
+// 		letter-spacing: 0.03em 
+// 		+xs
+// 			font-size: 24px
+// .search
+// 	margin-top: 38px
+// 	font-size: 0
+// 	vertical-align: top
+// 	display: inline-block
+// 	+xs
+// 		display: none
+// 	&:not(:first-child)
+// 		margin-left: 35px 
+// 		+sm
+// 			margin-left: 30px
+// 	&__button
+// 		background-color: transparent
+// 		vertical-align: top
+// 		display: inline-block
+// 		.icon
+// 			font-size: 15px
+// .nav
+// 	vertical-align: top
+// 	display: inline-block
+// 	+md
+// 		display: none
+// 	&:not(:first-child)
+// 		margin-left: 20px
+// 	&__list
+// 		font-size: 0
+// 	&__item
+// 		vertical-align: top
+// 		display: inline-block
+// 		&:not(:first-child)
+// 			margin-left: 6px
+// 			+lg
+// 				margin-left: 2px
+// 		&.is-active
+// 			.nav__link
+// 				color: $white 
+// 				background-color: $blue
+// 				&:hover
+// 					color: $white
+// 	&__link
+// 		padding: 31px 16px 16px
+// 		letter-spacing: 0.035em 
+// 		color: $black
+// 		text-transform: uppercase 
+// 		font-size: 17px
+// 		transition: color .3s ease-in-out
+// 		display: block
+// 		+lg
+// 			padding: 31px 10px 16px
+// 		+hover
+// 			color: $blue
+// .login
+// 	margin-top: 6px
+// 	vertical-align: top
+// 	display: inline-block
+// 	color: $black 
+// 	+f(17px,700,1.55) 
+// 	+xs
+// 		margin-top: 4px
+// 	&__link
+// 		color: $black 
+// 		letter-spacing: 0.03em
+// 		text-transform: uppercase
+// 		transition: color .3s ease-in-out
+// 		display: block
+// 		+hover
+// 			color: $blue
+// 		.icon
+// 			margin: 4px 7px 0 0
+// 			font-size: 20px
+// 			vertical-align: top
+// 			display: inline-block
+// 			+xs
+// 				margin: 6px 4px 0 0
+// 				font-size: 16px
+
+// .partnership
+// 	vertical-align: top
+// 	display: inline-block
+// 	&:not(:first-child)
+// 		margin-left: 25px
+// 		+xs
+// 			margin-left: 10px 
+
+
+/* HEADER 1*/
 .header
 	padding-bottom: 22px
 	background-color: $white 
 	+xs
 		padding-bottom: 15px
+	&__wrap
+		+clr
+		+md
+			width: 100%
+			height: 100%
+			position: fixed
+			top: 60px
+			left: 0
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: flex-start
+			padding: 30px
+			background-color: $white
+			margin-left: -100%
+			transition: transform .5s
+			z-index: 5
+			&.is-active
+				transform: translateX(100%)
 	&__left
 		float: left
+		margin-left: 35px
+		+md
+			margin: 0
+			float: none
+			order: 2
+			width: 100%
 	&__right
 		float: right
 		margin-top: 25px
-		+xs
-			margin-top: 15px
+		+md
+			margin: 0
+			float: none
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 100%
+		+sm
+			flex-direction: column
+		.btn
+			+md
+				min-width: 100%
 
 .logo
 	color: $black 
 	vertical-align: top
 	display: inline-block
+	float: left
 	.header &
 		margin-top: 26px
 		+xs
@@ -32,27 +183,54 @@
 	font-size: 0
 	vertical-align: top
 	display: inline-block
-	+xs
-		display: none
-	&:not(:first-child)
-		margin-left: 35px 
-		+sm
-			margin-left: 30px
+	position: relative
+	+md
+		width: 100%
+		margin-top: 13px
+		padding: 15px 20px 12px 43px
+		border: 2px solid #E6E6E6
 	&__button
 		background-color: transparent
 		vertical-align: top
 		display: inline-block
+		+md
+			position: absolute
+			top: 12px
+			left: 13px
 		.icon
 			font-size: 15px
+	&__input
+		position: absolute
+		opacity: 0
+		z-index: -1
+		font-size: 15px
+		font-weight: 300
+		font-family: $yanone
+		z-index: 3
+		+md
+			position: relative
+			opacity: 1
+			width: 100%
+		&:focus
+			+placeholder
+				font-size: 0
+
 .nav
 	vertical-align: top
 	display: inline-block
 	+md
-		display: none
+		display: block
+		margin-top: 13px
 	&:not(:first-child)
 		margin-left: 20px
+		+md
+			margin-left: 0
 	&__list
 		font-size: 0
+		+md
+			display: flex
+			flex-direction: column
+			margin: 0 -30px
 	&__item
 		vertical-align: top
 		display: inline-block
@@ -60,6 +238,9 @@
 			margin-left: 6px
 			+lg
 				margin-left: 2px
+			+md
+				margin-left: 0
+				border-top: 1px solid rgba(#707070,.1)
 		&.is-active
 			.nav__link
 				color: $white 
@@ -76,6 +257,8 @@
 		display: block
 		+lg
 			padding: 31px 10px 16px
+		+md
+			padding: 12px 30px 11px
 		+hover
 			color: $blue
 .login
@@ -83,9 +266,14 @@
 	vertical-align: top
 	display: inline-block
 	color: $black 
-	+f(17px,700,1.55) 
-	+xs
-		margin-top: 4px
+	+f(17px,700,1.55)
+	+md
+		order: 2
+		width: calc(50% - 7px)
+		margin-top: 0
+	+sm
+		margin-top: 13px
+		width: 100%
 	&__link
 		color: $black 
 		letter-spacing: 0.03em
@@ -94,19 +282,129 @@
 		display: block
 		+hover
 			color: $blue
+		+md
+			border: 2px solid #E6E6E6
+			text-align: center
+			padding: 7px 0 3px
+		+sm
+			padding: 11px 0 7px
 		.icon
 			margin: 4px 7px 0 0
 			font-size: 20px
 			vertical-align: top
 			display: inline-block
-			+xs
-				margin: 6px 4px 0 0
-				font-size: 16px
+			+md
+				margin: 1px 7px 0 0
 
 .partnership
 	vertical-align: top
 	display: inline-block
 	&:not(:first-child)
 		margin-left: 25px
+		+md
+			margin: 0
+			width: calc(50% - 7px)
+		+sm
+			width: 100%
+
+
+/*Sandwich*/
+.toggle-mnu
+	position: relative
+	float: right
+	width: 32px
+	height: 32px
+	display: none
+	z-index: 100
+	border: none
+	background-color: transparent
+	margin-top: 23px
+	+md
+		display: block
+	+xs
+		margin-top: 14px 
+	&:before
+		content: ""
+		position: absolute
+		top: -10px
+		left: -10px
+		right: -10px
+		bottom: -10px
+	&:focus
+		outline: none
+
+$w: 32px
+$h: 3px
+
+.sandwich
+	// display: flex
+	// flex-direction: column
+	// justify-content: space-around
+	width: $w
+	// height: $h
+	position: absolute
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 200
+	top: 50%
+	transform: translateY(-50%)
+.sw-topper
+	display: block
+	position: relative
+	transform-origin: left top
+	// top: -($h * 2)
+	width: $w 
+	height: $h
+	background: $gray
+	border: none 
+	// border-radius: rem(4px 4px 4px 4px)
+	transition: transform 0.5s
+	// transition-delay: 0.2s, 0s
+	margin-bottom: 5px
+	+xs
+		margin-bottom: 4px
+.sw-bottom
+	overflow: hidden
+	display: block
+	position: relative
+	&__inner
+		display: block
+		position: relative
+		width: $w
+		height: $h
+		// top: -($h - ($h / 2))
+		transform-origin: center center
+		background: $gray
+		border: none
+		// border-radius: rem(4px 4px 4px 4px)
+		transition: transform 0.3s ease-in-out, opacity .5s ease-in-out
+		margin-bottom: 5px
 		+xs
-			margin-left: 10px 
+			margin-bottom: 4px
+
+.sw-footer
+	display: block
+	position: relative
+	width: $w
+	height: $h
+	// top: $h
+	transform-origin: left
+	background: $gray
+	border: none
+	// border-radius: rem(4px 4px 4px 4px)
+	transition: transform 0.5s
+	// transition-delay: 0.1s
+
+.sandwich.is-active
+	.sw-topper
+		// top: rem(8px)
+		transform: translate(0, -3px) rotate(45deg)
+	.sw-bottom__inner
+		opacity: 0
+		// top: 0
+		transform: translateX(-105%)
+	.sw-footer
+		transform: translate(0, 3px) rotate(-45deg)
+		+xs
+			transform: translate(0, 5px) rotate(-45deg)
