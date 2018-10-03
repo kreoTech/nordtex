@@ -32,7 +32,14 @@
                       <use xlink:href="img/sprite.svg#icon-search"></use>
                     </svg>
                   </button>
-                  <input class="search__input" type="text" placeholder="Поиск">
+                  <div class="search__wrap">
+                    <input class="search__input" type="text" placeholder="Поиск">
+                    <button class="search__close">
+                      <svg class="icon icon-close">
+                        <use xlink:href="img/sprite.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </form>
               </div>
               <!-- end search -->
@@ -122,17 +129,20 @@
       </div>
       <!-- end topic -->
       <!-- begin slider -->
-      <div class="slider-wrap slider-wrap_high js-slider-wrap">
-        <div class="slider-wrap__out">
-          <div class="slider-wrap__inner inner">
+      <div class="brand-slider-wrap brand-slider-wrap_high js-brand-slider-wrap">
+        <div class="brand-slider-wrap__out">
+          <div class="brand-slider-wrap__inner inner">
             <!-- begin wind -->
-            <div class="slider-wrap__wind-abs wind">
-              <div class="wind__head">
-                <h5 class="wind__title">КОМНАТА</h5>
-                <div class="wind__list-round">
+            <div class="brand-slider-wrap__wind-abs brand-wind">
+              <div class="brand-wind__head" wind-drop-parent>
+                <h5 class="brand-wind__title" wind-drop-trigger>КОМНАТА <svg class="icon icon-right">
+                    <use xlink:href="img/sprite.svg#icon-right"></use>
+                  </svg>
+                </h5>
+                <div class="brand-wind__list-round" wind-drop-list>
                   <div class="row">
                     <div class="col col-33">
-                      <label class="wind__item-round">
+                      <label class="brand-wind__item-round">
                         <input type="radio" name="rooms">
                         <span class="wind__text">Спальна</span>
                         <span class="wind__check">
@@ -143,7 +153,7 @@
                       </label>
                     </div>
                     <div class="col col-33">
-                      <label class="wind__item-round">
+                      <label class="brand-wind__item-round">
                         <input type="radio" name="rooms">
                         <span class="wind__text">Кухня</span>
                         <span class="wind__check">
@@ -154,7 +164,7 @@
                       </label>
                     </div>
                     <div class="col col-33">
-                      <label class="wind__item-round">
+                      <label class="brand-wind__item-round">
                         <input type="radio" name="rooms">
                         <span class="wind__text">Ванна</span>
                         <span class="wind__check">
@@ -165,7 +175,7 @@
                       </label>
                     </div>
                     <div class="col col-33">
-                      <label class="wind__item-round">
+                      <label class="brand-wind__item-round">
                         <input type="radio" name="rooms" checked>
                         <span class="wind__text">Спальна</span>
                         <span class="wind__check">
@@ -176,7 +186,7 @@
                       </label>
                     </div>
                     <div class="col col-33">
-                      <label class="wind__item-round">
+                      <label class="brand-wind__item-round">
                         <input type="radio" name="rooms">
                         <span class="wind__text">Кухня</span>
                         <span class="wind__check">
@@ -187,7 +197,7 @@
                       </label>
                     </div>
                     <div class="col col-33">
-                      <label class="wind__item-round">
+                      <label class="brand-wind__item-round">
                         <input type="radio" name="rooms">
                         <span class="wind__text">Ванна</span>
                         <span class="wind__check">
@@ -200,9 +210,12 @@
                   </div>
                 </div>
               </div>
-              <div class="wind__accordeon">
-                <h5 class="wind__title">КОМПЛЕКТАЦИЯ</h5>
-                <div class="accordeon-wrap">
+              <div class="brand-wind__accordeon" wind-drop-parent>
+                <h5 class="brand-wind__title" wind-drop-trigger>КОМПЛЕКТАЦИЯ <svg class="icon icon-right">
+                    <use xlink:href="img/sprite.svg#icon-right"></use>
+                  </svg>
+                </h5>
+                <div class="accordeon-wrap" wind-drop-list>
                   <ul class="accordeon">
                     <li class="accordeon__item">
                       <div class="accordeon__head js-accordeon-head">1 спальный</div>
@@ -237,17 +250,17 @@
                   </ul>
                 </div>
               </div>
-              <div class="wind__body wind__body_dark">
-                <h5 class="wind__title">ДИЗАЙН</h5>
-                <div class="wind__name js-slide-name">Сладкий бриз</div>
-                <div class="wind__trigger">
-                  <button class="wind__btn js-slider-prev" type="button">
+              <div class="brand-wind__body brand-wind__body_dark">
+                <h5 class="brand-wind__title">ДИЗАЙН</h5>
+                <div class="brand-wind__name js-brand-slide-name">Сладкий бриз</div>
+                <div class="brand-wind__trigger">
+                  <button class="brand-wind__btn js-brand-slider-prev" type="button">
                     <svg class="icon icon-left">
                       <use xlink:href="img/sprite.svg#icon-left"></use>
                     </svg>
                   </button>
-                  <div class="wind__numb js-slide-length">01</div>
-                  <button class="wind__btn js-slider-next" type="button">
+                  <div class="brand-wind__numb js-brand-slide-length">01</div>
+                  <button class="brand-wind__btn js-brand-slider-next" type="button">
                     <svg class="icon icon-right">
                       <use xlink:href="img/sprite.svg#icon-right"></use>
                     </svg>
@@ -258,22 +271,22 @@
             <!-- end wind -->
           </div>
         </div>
-        <div class="slider js-slider">
-          <div class="slider__slide-50 js-slider-slide" data-name="Сладкий бриз">
-            <div class="slider__slide-wrap">
-              <div class="slider__img" style="background-image: url(./img/slider-img.jpg);">
-                <a href="#" class="slider__link" data-modal-control="slider-modal">
-                  <button class="slider__btn">
+        <div class="brand-slider js-brand-slider">
+          <div class="brand-slider__slide-50 js-brand-slider-slide" data-name="Сладкий бриз">
+            <div class="brand-slider__slide-wrap">
+              <div class="brand-slider__img" style="background-image: url(./img/slider-img.jpg);">
+                <a href="#" class="brand-slider__link" data-modal-control="slider-modal">
+                  <button class="brand-slider__btn">
                     <svg class="icon icon-zoom">
                       <use xlink:href="img/sprite.svg#icon-zoom"></use>
                     </svg>
                   </button>
                 </a>
               </div>
-              <div class="slider__text">
-                <div class="slider__text-wrap">
-                  <h3 class="slider__title slider__title_lg">Пододеяльник двуспальный красивый</h3>
-                  <span class="slider__subtitle">Коллекция "Верона"</span>
+              <div class="brand-slider__text">
+                <div class="brand-slider__text-wrap">
+                  <h3 class="brand-slider__title brand-slider__title_lg">Пододеяльник двуспальный красивый</h3>
+                  <span class="brand-slider__subtitle">Коллекция "Верона"</span>
                   <p>Love me - бренд качественного, модного постельного белья для современных мужчин и женщин, которым оченб важно самовыражение. Станете нашим клиентом!</p>
                   <!-- begin tabs -->
                   <div class="tabs-slide" data-tabs>
@@ -311,17 +324,17 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slider__price-box">
-                    <div class="slider__price">1 500 Р</div>
-                    <div class="slider__base-price">
+                  <div class="brand-slider__price-box">
+                    <div class="brand-slider__price">1 500 Р</div>
+                    <div class="brand-slider__base-price">
                       <span> 3 500 Р </span>
                       <span class="up-text up-text_sm">Базовая цена</span>
                     </div>
                   </div>
-                  <form action="" class="slider__form">
+                  <form action="" class="brand-slider__form">
                     <div class="form-group">
                       <div class="up-text">Введите количество </div>
-                      <div class="slider__input">
+                      <div class="brand-slider__input">
                         <input type="text" placeholder="25">
                       </div>
                     </div>
@@ -343,13 +356,13 @@
               </div>
             </div>
           </div>
-          <div class="slider__slide js-slider-slide" data-name="Сладкий бриз 1">
-            <div class="slider__bg" style="background-image: url(./img/slider-img.jpg);"></div>
-            <div class="slider__inner inner">
-              <div class="slider__content">
-                <h3 class="slider__title">Красиво. Доступно. Удобно 2</h3>
+          <div class="brand-slider__slide js-brand-slider-slide" data-name="Сладкий бриз 1">
+            <div class="brand-slider__bg" style="background-image: url(./img/slider-img.jpg);"></div>
+            <div class="brand-slider__inner inner">
+              <div class="brand-slider__content">
+                <h3 class="brand-slider__title">Красиво. Доступно. Удобно 2</h3>
                 <p>Краткое описание преимуществ именно этой коллекции в несколько строк, а возможно опсианик данной коллекции в три строки</p>
-                <div class="slider__footer">
+                <div class="brand-slider__footer">
                   <a href="#" class="btn">Перейти к коллекции <svg class="icon icon-arrow-next">
                       <use xlink:href="img/sprite.svg#icon-arrow-next"></use>
                     </svg>
@@ -592,7 +605,7 @@
                           <div class="slider-sm__text">
                             <p> Love me - бренд качественного, модного постельного белья для современных женщин и мужчин, которым очень важно самовыражение. Это постельное белье создает ощущение их. </p>
                             <div class="slider-sm__price-wrap">
-                              <a href="#" class="btn">Перейти к товару</a>
+                              <a href="#" class="btn sm-order2">Перейти к товару</a>
                               <div class="slider-sm__price-box">
                                 <div class="slider-sm__price">1 500 Р</div>
                                 <div class="slider-sm__base-price">

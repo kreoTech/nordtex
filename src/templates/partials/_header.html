@@ -12,7 +12,10 @@
 				<div class="search">
 					<form action="">
 						<button class="search__button" type="submit">{{ mixins.icon('search') }}</button>
-						<input class="search__input" type="text" placeholder="Поиск">
+						<div class="search__wrap">
+							<input class="search__input" type="text" placeholder="Поиск">
+							<button class="search__close">{{ mixins.icon('close') }}</button>
+						</div>
 					</form>
 				</div>
 				<!-- end search -->

@@ -195,25 +195,49 @@
 		display: inline-block
 		+md
 			position: absolute
-			top: 12px
+			top: 14px
 			left: 13px
 		.icon
 			font-size: 15px
-	&__input
+	&__wrap
 		position: absolute
-		opacity: 0
+		display: flex
+		padding: 18px 22px 20px
+		background-color: $blue
+		left: -22px
+		bottom: -123px
 		z-index: -1
+		opacity: 0
+		transition: opacity .3s
+		+md
+			position: sticky
+			z-index: 1
+			opacity: 1
+			padding: 0
+		&.is-active
+			opacity: 1
+			z-index: 2
+	&__input
 		font-size: 15px
 		font-weight: 300
 		font-family: $yanone
 		z-index: 3
+		padding: 17px 20px 15px
+		width: 253px
 		+md
 			position: relative
-			opacity: 1
 			width: 100%
+			padding: 0
 		&:focus
 			+placeholder
 				font-size: 0
+	&__close
+		background-color: transparent
+		color: $white
+		margin-left: 21px
+		font-size: 14px
+		+md
+			display: none
 
 .nav
 	vertical-align: top

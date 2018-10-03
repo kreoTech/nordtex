@@ -7,3 +7,5 @@ import './_popup.js';
 import './_validation.js';
 import './_accordeon.js';
 import './_sandwich.js';
+import './_search.js';
+import './_wind-drop.js';

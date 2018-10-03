@@ -357,12 +357,16 @@
 		vertical-align: top
 	&__content
 		padding: 31px 62px 38px
+		+xs
+			padding: 31px 0 38px
 	&__title
 		padding: 40px 62px
 		font-size: 22px
 		font-weight: 300
 		line-height: 1.136
 		text-align: left 
+		+xs
+			padding: 0 0 31px
 	&__text
 		font-size: 17px
 		font-weight: 300
@@ -371,15 +375,23 @@
 	&__price-wrap
 		display: flex
 		margin-top: 26px
+		+sm
+			flex-direction: column
 	&__price-box
 		display: flex
 		align-items: center
 		font-family: $circe
 		margin-left: 30px
+		+md
+			margin-left: 20px
+		+sm
+			margin-left: 0
 	&__price
 		font-size: 30px
 		margin-right: 21px
 		line-height: 1
+		+md
+			margin-right: 12px
 	&__base-price
 		font-size: 12px
 		line-height: 1.42
@@ -389,3 +401,378 @@
 	.sm-order2
 		+sm
 			margin-top: 20px
+			order: 2
+
+
+/* BRAND SLIDER*/
+.brand-slider-wrap
+	position: relative
+	height: 679px 
+	overflow: hidden
+	+md
+		height: auto
+	+xs
+		height: auto
+	&_high
+		height: 785px
+	&__out
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 2
+		padding-top: 110px
+		pointer-events: none
+		+md
+			padding-top: 79px
+		+xs
+			// position: relative
+			padding-top: 53px
+			// margin: 0 -15px
+	&__wind
+		float: right
+		+xs
+			float: none
+	&__wind-abs
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 50%
+		+lg
+			left: 40%
+		+md
+			bottom: auto
+			top: 425px
+			width: 100%
+			left: 0
+
+.brand-wind
+	width: 255px
+	color: $white 
+	pointer-events: initial
+	background-color: #3E3F43
+	&__head
+		padding: 25px 33px
+	&__title
+		margin-bottom: 15px
+		text-align: center
+		+f(17px,700,1.2)
+	// &__list-round
+	// 	display: flex
+	// 	flex-wrap: wrap
+	// 	margin: 0 -16px
+	&__item
+		position: relative
+		padding: 7px 25px 10px 8px
+		+f(15px,200,1)
+		min-height: 34px
+		user-select: none 
+		cursor: pointer
+		display: block
+		&:not(:last-child)
+			border-bottom: 1px solid rgba($white, .05)
+		input
+			position: absolute
+			opacity: 0
+			&:checked
+				& ~ .wind__check
+					opacity: 1
+				& ~ .wind__text
+					font-weight: 300 
+	&__item-round
+		position: relative
+		padding-top: 48px
+		+f(17px,300,1)
+		user-select: none 
+		cursor: pointer
+		display: block
+		text-align: center
+		margin-top: 10px
+		&:before
+			content: ""
+			position: absolute
+			width: 35px
+			height: 35px
+			border-radius: 50%
+			background-color: #6D6D6D
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+		input
+			position: absolute
+			opacity: 0
+			&:checked
+				& ~ .wind__check
+					opacity: 1
+				& ~ .wind__text
+					font-weight: 300 
+		.wind__check
+			right: auto
+			left: 50%
+			transform: translateX(-50%)
+			top: 16px
+			.icon
+				font-size: 13px
+
+	&__check
+		position: absolute
+		top: 50%
+		right: 10px
+		margin-top: -5px
+		font-size: 0
+		opacity: 0
+		transition: opacity .3s
+		.icon
+			font-size: 9px
+	&__text
+		transition: font-weight .1s
+	&__body
+		padding: 38px 33px 32px
+		background-color: #4A4B50
+		+md
+			display: none
+		&_dark
+			background-color: #3E3F43 
+	&__accordeon
+		padding: 35px 25px 35px 35px
+		background-color: #535356
+		.wind__title
+			margin-bottom: 30px
+	&__name
+		padding: 8px 12px 12px
+		text-align: center
+		+f(17px,700,1.2)
+		border: 1px solid rgba($white, .1) 
+	&__trigger
+		margin-top: 20px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		background-color: #4A4A4A 
+	&__btn
+		position: relative
+		width: 62px
+		height: 62px
+		color: $white 
+		transition: background-color .3s
+		background-color: $blue 
+		+hover
+			background-color: #C8C8C8 
+		.icon
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			font-size: 10px
+	&__numb
+		+f(26px,700,1.2)
+.brand-slider
+	opacity: 0
+	visibility: hidden
+	transition: opacity .3s, visibility .3s
+	&.slick-initialized
+		opacity: 1
+		visibility: visible
+	&__slide
+		position: relative
+		padding: 89px 0
+		height: 679px 
+		+vertical
+		+md
+			height: 596px
+			padding: 33px 0
+		+xs
+			padding: 44px 0
+			height: 779px
+	&__slide-50
+		position: relative
+		height: 785px
+		+md
+			height: auto
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-size: cover
+		background-position: center 
+	&__inner
+		width: 100%
+		position: relative
+		vertical-align: bottom
+		text-align: left
+		display: inline-block
+	&__content
+		padding: 28px 39px 36px 
+		font-size: 17px
+		line-height: 1.4
+		max-width: 421px 
+		background-color: #F9F9F9 
+		+md
+			max-width: 320px
+		+xs
+			max-width: 255px
+			padding: 20px 15px 20px 27px
+			margin: 0 auto
+			font-size: 13px
+	&__title
+		margin-bottom: 10px
+		+f(20px,300,1.2)
+		+xs
+			font-size: 20px
+		&_lg
+			font-size: 30px
+			+lg
+				font-size: 26px
+	&__footer
+		margin-top: 30px
+	&__slide-wrap
+		display: inline-flex
+		width: 100%
+		height: 100%
+		+md
+			flex-direction: column
+	&__img
+		flex-basis: 50%
+		background-size: cover
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		+lg
+			flex-basis: 40%
+		+md
+			flex-basis: 100%
+			height: 425px
+		img
+			display: block
+			max-width: 100%
+			object-fit: cover
+	&__text
+		flex-basis: 50%
+		font-size: 20px
+		text-align: left
+		padding: 0 15px 0 315px
+		background-color: #F6F6F6 
+		line-height: 1.55
+		+lg
+			// padding-left: 280px
+			flex-basis: 60%
+		+md
+			padding: 167px 37px 50px 19px
+			flex-basis: 100%
+			font-size: 17px
+	&__text-wrap
+		max-width: 320px
+		padding: 57px 0 78px
+		max-height: 100%
+		+md
+			max-width: none
+			padding: 0
+	&__subtitle
+		display: block
+		font-size: 15px
+		margin-bottom: 40px
+		+md
+			font-size: 17px
+			margin-bottom: 30px
+	&__price-box
+		display: flex
+		align-items: center
+		font-family: $circe
+		margin: 65px 0 20px
+		+md
+			margin-top: 47px
+	&__price
+		font-size: 30px
+		margin-right: 38px
+		line-height: 1
+	&__base-price
+		font-size: 12px
+		line-height: 1.42
+	&__form
+		display: flex
+		align-items: flex-end
+		margin-bottom: 45px
+		.form-group
+			margin: 0
+		.up-text
+			font-weight: 200
+	&__input
+		margin-top: 6px
+		max-width: 89px
+		margin-right: 14px
+		input
+			background-color: transparent
+			padding: 4px 14px
+			font-size: 20px
+			font-family: $circe
+			font-weight: 300
+			color: $black
+			border: 1px solid #CFCFCF
+			max-width: 100%
+			line-height: 1.5
+			+placeholder
+				font-size: 20px
+				font-family: $circe
+				font-weight: 300
+			&:focus
+				+placeholder
+					font-size: 0
+	&__link
+		width: 100%
+		height: 100%
+		display: block
+		position: relative
+	&__btn
+		font-size: 36px
+		position: absolute
+		top: 30px
+		right: 30px
+		display: block
+		background-color: transparent
+
+[wind-drop-list]
+	transition: opacity .3s, visibility .3s
+	+md
+		opacity: 0
+		visibility: hidden
+		position: absolute
+		bottom: -190px
+		left: 0
+		right: 0
+		background-color: #535356
+		z-index: 3
+		padding: 20px
+	&.is-show
+		+md
+			opacity: 1
+			visibility: visible
+[wind-drop-parent]
+	+md
+		height: auto
+		position: relative
+		padding: 0
+[wind-drop-trigger]
+	+md
+		position: relative
+		margin: 0
+		padding: 29px 15px 23px
+		cursor: pointer
+		user-select: none
+	.icon
+		position: absolute
+		top: 33px
+		right: 32px
+		font-size: 9px
+		color: $white
+		opacity: .5
+		display: none
+		transform: rotate(90deg)
+		transition: transform .3s
+		+md
+			display: block
+	&.is-active
+		.icon
+			transform: rotate(-90deg)
+

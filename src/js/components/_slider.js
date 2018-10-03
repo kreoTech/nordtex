@@ -6,8 +6,8 @@ const initSlider = () => {
   const slider = wrap.find('.js-slider');
   const sliderNumber = $('.js-slide-length');
   slider
-  	.on('init', () => { sliderNumber.text('01'); })
-  	.slick({
+    .on('init', () => { sliderNumber.text('01'); })
+    .slick({
       arrows: false,
       infinite: true,
       speed: 500,
@@ -15,13 +15,13 @@ const initSlider = () => {
       cssEase: 'linear'
     })
     .on('beforeChange', (event, slick, currentSlide, nextSlide) => {
-    	const nextSl = $($(slick.$slides[nextSlide]).find('.js-slider-slide'));
-    	const data = nextSl.data('name');
-    	const name = $('.js-slide-name');
-    	name.text(data);
-    	(nextSlide + 1 <= 9)
-    		? sliderNumber.text(`0${nextSlide+1}`)
-    		: sliderNumber.text(`${nextSlide+1}`);
+      const nextSl = $($(slick.$slides[nextSlide]).find('.js-slider-slide'));
+      const data = nextSl.data('name');
+      const name = $('.js-slide-name');
+      name.text(data);
+      (nextSlide + 1 <= 9)
+        ? sliderNumber.text(`0${nextSlide+1}`)
+        : sliderNumber.text(`${nextSlide+1}`);
     });
 
   const btnPrev = $('.js-slider-prev');
@@ -37,8 +37,8 @@ const initSliderSm = () => {
   const slider = wrap.find('.js-slider-sm');
   const sliderNumber = $('.js-slide-length');
   slider
-  	.on('init', () => { sliderNumber.text('01'); })
-  	.slick({
+    .on('init', () => { sliderNumber.text('01'); })
+    .slick({
       arrows: false,
       infinite: true,
       speed: 500,
@@ -46,10 +46,10 @@ const initSliderSm = () => {
       cssEase: 'linear'
     })
     .on('beforeChange', (event, slick, currentSlide, nextSlide) => {
-    	const nextSl = $($(slick.$slides[nextSlide]).find('.js-slider-sm-slide'));
+      const nextSl = $($(slick.$slides[nextSlide]).find('.js-slider-sm-slide'));
       const data = nextSl.data('name');
-    	const name = $('.js-slide-sm-name');
-    	name.text(data);
+      const name = $('.js-slide-sm-name');
+      name.text(data);
     });
 
   const btnPrev = $('.js-slider-sm-prev');
@@ -60,8 +60,42 @@ const initSliderSm = () => {
 
 };
 
+const initBrandSlider = () => {
+  const wrap = $('.js-brand-slider-wrap');
+  const slider = wrap.find('.js-brand-slider');
+  const sliderNumber = $('.js-brand-slide-length');
+  slider
+    .on('init', () => { sliderNumber.text('01'); })
+    .slick({
+      arrows: false,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear'
+    })
+    .on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+      const nextSl = $($(slick.$slides[nextSlide]).find('.js-brand-slider-slide'));
+      const data = nextSl.data('name');
+      const name = $('.js-brand-slide-name');
+      name.text(data);
+      (nextSlide + 1 <= 9)
+        ? sliderNumber.text(`0${nextSlide+1}`)
+        : sliderNumber.text(`${nextSlide+1}`);
+    });
+
+  const btnPrev = $('.js-brand-slider-prev');
+  const btnNext = $('.js-brand-slider-next');
+
+  btnPrev.click(() => { wrap.find('.js-brand-slider').slick('slickPrev'); });
+  btnNext.click(() => { wrap.find('.js-brand-slider').slick('slickNext'); });
+
+};
+
 window.initSlider = initSlider;
 window.initSlider();
 
 window.initSliderSm = initSliderSm;
 window.initSliderSm();
+
+window.initBrandSlider = initBrandSlider;
+window.initBrandSlider();

@@ -153,8 +153,8 @@
 		transition: background-color .3s, border-color .3s, color .3s
 		cursor: pointer
 		text-transform: uppercase
-		+sm
-			display: block
+		// +sm
+		// 	display: block
 		&:after
 			position: absolute
 			top: 50%
@@ -176,19 +176,19 @@
 			border-left: .3em solid transparent
 	&__list
 		font-size: 0
-		+sm
-			opacity: 0
-			z-index: -1
-			position: absolute
-			left: 0
-			right: 0
-			bottom: -90px
-			background-color: #fff
-			box-shadow: 0 6px 12px rgba(#000,.12)
-			// margin: 0 15px
-			padding: 0
-		+xs
-			padding: 0
+		// +sm
+		// 	opacity: 0
+		// 	z-index: -1
+		// 	position: absolute
+		// 	left: 0
+		// 	right: 0
+		// 	bottom: -90px
+		// 	background-color: #fff
+		// 	box-shadow: 0 6px 12px rgba(#000,.12)
+		// 	// margin: 0 15px
+		// 	padding: 0
+		// +xs
+		// 	padding: 0
 	&__item
 		position: relative
 		display: inline-block
@@ -200,8 +200,8 @@
 		user-select: none
 		transition: color .3s
 		text-transform: uppercase
-		+sm
-			display: block
+		// +sm
+		// 	display: block
 		&:not(:last-child)
 			margin-right: 40px
 		&.is-active
@@ -211,9 +211,9 @@
 			color: $black
 		&:not(:first-child)
 			margin-left: -2px
-			+sm
-				margin-left: 0
-				margin-top: -2px
+			// +sm
+			// 	margin-left: 0
+			// 	margin-top: -2px
 	&__inner
 		padding-top: 18px
 		line-height: 1.2
