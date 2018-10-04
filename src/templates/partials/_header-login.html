@@ -1,0 +1,62 @@
+<!-- begin header -->
+<header class="header">
+		<div class="header__inner inner">
+			<!-- begin logo -->
+			<a href="#" class="logo">
+				<h1 class="logo__text">НОРДТЕКС</h1>
+			</a>
+			<!-- end logo -->
+			<div class="header__wrap">
+				<div class="header__left">
+					<!-- begin search -->
+					<div class="search">
+						<form action="">
+							<button class="search__button" type="submit">{{ mixins.icon('search') }}</button>
+							<div class="search__wrap">
+								<input class="search__input" type="text" placeholder="Поиск">
+								<button class="search__close">{{ mixins.icon('close') }}</button>
+							</div>
+						</form>
+					</div>
+					<!-- end search -->
+					<!-- begin nav -->
+					<nav class="nav">
+						<ul class="nav__list">
+							{% for text in ['О КОМПАНИИ', 'ПРОДУКЦИЯ', 'МАРКИ', 'ПАРТНЕРАМ', 'НОВОСТИ', 'КОНТАКТЫ'] %}
+							<li class="nav__item{% if loop.index === 3 %} is-active{% endif %}">
+								<a href="#" class="nav__link">{{ text }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</nav>
+					<!-- end nav -->
+				</div>
+				<div class="header__right">
+					<!-- begin login -->
+					<div class="basket">
+						<a href="#" class="login__link" data-modal-control="login">
+							{{ mixins.icon('cart-of-ecommerce') }}
+							<span class="basket__text">
+								КОРЗИНА
+								<span class="basket__number">14</span>
+							</span>
+						</a>
+					</div>
+					<!-- end login -->
+					<!-- begin login -->
+					<div class="login">
+						<a href="#" class="login__link" data-modal-control="login">{{ mixins.icon('user') }}ЛИЧНЫЙ КАБИНЕТ</a>
+					</div>
+					<!-- end login -->
+				</div>
+			</div>
+			<button type="button" class="toggle-mnu">
+				<span class="sandwich">
+					<span class="sw-topper"></span>
+					<span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
+					<span class="sw-footer"></span>
+				</span>
+			</button>
+		</div>
+	</header>
+	<!-- end header -->

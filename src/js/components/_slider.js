@@ -42,6 +42,7 @@ const initSliderSm = () => {
       arrows: false,
       infinite: true,
       speed: 500,
+      adaptiveHeight: true,
       fade: true,
       cssEase: 'linear'
     })
@@ -71,6 +72,7 @@ const initBrandSlider = () => {
       infinite: true,
       speed: 500,
       fade: true,
+      adaptiveHeight: true,
       cssEase: 'linear'
     })
     .on('beforeChange', (event, slick, currentSlide, nextSlide) => {

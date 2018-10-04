@@ -301,8 +301,9 @@
 
 .slider-sm-wrap
 	position: relative
-	height: 705px 
+	// height: 705px 
 	overflow: hidden
+	font-size: 0
 	+sm
 		height: auto
 .slider-sm
@@ -315,7 +316,7 @@
 	&__slide
 		position: relative
 		// padding: 20px
-		height: 705px 
+		// height: 705px 
 		+vertical
 		+sm
 			height: auto
@@ -330,6 +331,8 @@
 		background-size: cover
 		background-position: center 
 		background-repeat: no-repeat
+		+sm
+			height: 250px
 	&__name
 		position: absolute
 		left: 20px
@@ -358,7 +361,7 @@
 	&__content
 		padding: 31px 62px 38px
 		+xs
-			padding: 31px 0 38px
+			padding: 0 15px
 	&__title
 		padding: 40px 62px
 		font-size: 22px
@@ -366,7 +369,7 @@
 		line-height: 1.136
 		text-align: left 
 		+xs
-			padding: 0 0 31px
+			padding: 0 15px 31px
 	&__text
 		font-size: 17px
 		font-weight: 300
@@ -407,14 +410,15 @@
 /* BRAND SLIDER*/
 .brand-slider-wrap
 	position: relative
-	height: 679px 
+	// height: 679px 
+	font-size: 0
 	overflow: hidden
 	+md
 		height: auto
 	+xs
 		height: auto
 	&_high
-		height: 785px
+		// height: 785px
 	&__out
 		position: absolute
 		top: 0
@@ -577,19 +581,19 @@
 	&__slide
 		position: relative
 		padding: 89px 0
-		height: 679px 
+		// height: 679px 
 		+vertical
 		+md
-			height: 596px
+			// height: 596px
 			padding: 33px 0
 		+xs
 			padding: 44px 0
-			height: 779px
+			// height: 779px
 	&__slide-50
 		position: relative
-		height: 785px
-		+md
-			height: auto
+		// // height: 785px
+		// +md
+		// 	height: auto
 	&__bg
 		position: absolute
 		top: 0
@@ -669,6 +673,9 @@
 		+md
 			max-width: none
 			padding: 0
+		.tabs-slide
+			+sm
+				margin-top: 27px
 	&__subtitle
 		display: block
 		font-size: 15px
@@ -682,7 +689,7 @@
 		font-family: $circe
 		margin: 65px 0 20px
 		+md
-			margin-top: 47px
+			margin-top: 43px
 	&__price
 		font-size: 30px
 		margin-right: 38px
@@ -738,7 +745,7 @@
 		opacity: 0
 		visibility: hidden
 		position: absolute
-		bottom: -190px
+		top: 100%
 		left: 0
 		right: 0
 		background-color: #535356

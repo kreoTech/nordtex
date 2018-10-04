@@ -313,12 +313,78 @@
 		+sm
 			padding: 11px 0 7px
 		.icon
-			margin: 4px 7px 0 0
+			margin: 1px 7px 0 0
 			font-size: 20px
 			vertical-align: top
 			display: inline-block
 			+md
 				margin: 1px 7px 0 0
+.basket
+	margin-top: 6px
+	vertical-align: top
+	display: inline-block
+	color: $black 
+	+f(17px,700,1.55)
+	+md
+		order: 2
+		width: calc(50% - 7px)
+		margin-top: 0
+	+sm
+		margin-top: 13px
+		width: 100%
+	&:not(:last-child)
+		margin-right: 47px
+		+sm
+			margin-right: 0
+	&__text
+		position: relative
+	&__number
+		position: absolute
+		display: flex
+		align-items: center
+		justify-content: center
+		line-height: 1
+		font-size: 12px
+		font-weight: 700
+		z-index: 1
+		color: $white
+		width: 16px
+		height: 16px
+		border-radius: 50%
+		background-color: $blue
+		top: -8px
+		left: -20px
+		// &:after
+		// 	content: ""
+		// 	position: absolute
+		// 	width: 16px
+		// 	height: 16px
+		// 	border-radius: 50%
+		// 	background-color: $blue
+		// 	top: 50%
+		// 	left: 50%
+		// 	transform: translate(-50%, -50%)
+		// 	z-index: -1
+
+	&__link
+		color: $black 
+		letter-spacing: 0.03em
+		text-transform: uppercase
+		transition: color .3s ease-in-out
+		display: block
+		+hover
+			color: $blue
+		+md
+			border: 2px solid #E6E6E6
+			text-align: center
+			padding: 7px 0 3px
+		+sm
+			padding: 11px 0 7px
+		.icon
+			margin: 1px 7px 0 0
+			font-size: 20px
+			vertical-align: top
+			display: inline-block
 
 .partnership
 	vertical-align: top
