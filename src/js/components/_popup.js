@@ -32,7 +32,6 @@ import {OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN} from './../constants';
       if (!$(e.target).closest(inner).length && modal.hasClass(OPEN) && !$(e.target).closest(controls).length) {
         
         hide();
-        console.log($(e.target).closest(inner).length);
         controls.removeClass(ACTIVE);
       }
     });
