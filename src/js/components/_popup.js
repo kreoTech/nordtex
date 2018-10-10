@@ -29,9 +29,11 @@ import {OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN} from './../constants';
     };
 
     BODY.on('click', e => {
-      if ($(e.target).closest(inner).length || $(e.target).closest('button[type="submit"]').length || $(e.target).closest(close).length || $(e.target).closest(controls).length ) return;
-      hide();
-      controls.removeClass(ACTIVE);
+      if (!$(e.target).closest(inner).length && modal.hasClass(OPEN) && !$(e.target).closest(controls).length) {
+        
+        hide();
+        controls.removeClass(ACTIVE);
+      }
     });
 
     close.on('click', e => {
