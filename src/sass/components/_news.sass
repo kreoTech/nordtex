@@ -33,6 +33,17 @@
 	p
 		margin-top: 30px
 
+.where-item
+	&:hover
+		box-shadow: none
+	.news-item
+		&__img
+			max-width: 100%
+			img
+				max-width: 100%
+				object-fit: contain
+
+
 .news
 	padding: 69px 0 73px
 	+sm
@@ -41,4 +52,5 @@
 		&:not(:last-child)
 			+sm
 				margin-bottom: 15px
-	
+
+

@@ -1,7 +1,9 @@
 .topic
-	padding: 56px 0 65px
-	color: rgba($black, .6) 
-	background-color: #F2F2F2 
+	padding: 60px 0
+	background: #F2F2F2 img-url('topic-title.webp') center center no-repeat
+	color: $white
+	text-shadow: 1px 1px 0 $black
+	background-size: 100% auto
 	+sm
 		padding: 28px 0 32px
 	&_lg
@@ -11,6 +13,7 @@
 		justify-content: space-between
 		align-items: center
 	&__inner
+		padding-left: 70px
 		&_horizontal
 			display: flex
 			justify-content: space-between
@@ -23,7 +26,10 @@
 				max-width: 631px
 				margin-left: 10px
 	&__title
-		margin-bottom: 30px 
+		margin-bottom: 30px
+		color: $white
+		text-shadow: 1px 1px 1px $black
+		font-weight: 500
 		+sm
 			margin-bottom: 15px
 		&_wm
@@ -34,17 +40,15 @@
 			max-width: 730px
 	&__subtitle
 		font-size: 30px
-		font-weight: 200
+		font-weight: 500
 		margin: 7px 0 18px
 		line-height: 1.2
 		color: $black
 		&_sm
 			font-size: 25px
-			font-weight: 300
 			margin: 0
 		&_xs
 			font-size: 17px
-			font-weight: 300
 			margin: 0
 	&__text
 		color: $black
@@ -54,8 +58,8 @@
 					margin-top: 15px
 	&__number
 		font-family: $circe
-		font-weight: 400
-		color: $black
+		font-weight: 300
+		color: #f2f2f2
 	&__date
 		font-size: 25px
 		font-weight: 300
@@ -65,4 +69,3 @@
 	&__right
 		.up-text
 			margin-bottom: 14px
-		

@@ -25,3 +25,5 @@ PageList:
   ready: 50
 - file: news-article.html
   ready: 50
+- file: where.html
+  ready: 50

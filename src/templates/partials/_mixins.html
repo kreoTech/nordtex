@@ -126,6 +126,42 @@
 </div>
 {% endmacro %}
 
+{% macro whereItemInternet(props) %}
+<a href={{ props.href }} target="_blank" class="news-item where-item">
+  <div class="news-item__img">
+    <img src="./img/{{ props.img }}" alt="img">
+  </div>
+</a>
+{% endmacro %}
+
+{% macro whereItem(props) %}
+<div class="news-item">
+  <div class="news-item__img">
+    <img src="./img/{{ props.img }}" alt="img">
+  </div>
+  <div class="news-item__text">
+    <h6 class="news-item__title">
+      {{ props.title }}
+    </h6>
+    <p>
+      {% if props.address %}
+      <strong>Адрес:</strong> {{ props.address }}
+      <br>
+      <br>
+      {% endif %}
+      {% if props.tel %}
+      <strong>Тел:</strong> <a href="#">{{ props.tel }}</a>
+      <br>
+      <br>
+      {% endif %}
+      {% if props.time %}
+      <strong>Режим работы:</strong> {{ props.time }}
+      {% endif %}
+    </p>
+  </div>
+</div>
+{% endmacro %}
+
 {% macro newsItem(props) %}
 	<a href="#" class="news-item">
 		<div class="news-item__img">
@@ -137,7 +173,7 @@
 			</h6>
 			{% if props.text %}
 			<p>
-				{{ props.text}}
+				{{ props.text }}
 			</p>
 			{% endif %}
 		</div>

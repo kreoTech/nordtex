@@ -13,13 +13,22 @@
 		</div>
 		<div class="footer__links">
 			<ul class="footer__list">
-				{% for text in ['О КОМПАНИИ', 'ПРОДУКЦИЯ', 'МАРКИ', 'ПАРТНЕРАМ', 'НОВОСТИ', 'КОНТАКТЫ'] %}
+				{% for text in ['О КОМПАНИИ', 'ПРОДУКЦИЯ', 'МАРКИ', 'ПАРТНЕРАМ'] %}
 				<li class="footer__item">
 					<a href="#" class="footer__link">{{ text }}</a>
 				</li>
 				{% endfor %}
 			</ul>
 		</div>
+    <div class="footer__links">
+      <ul class="footer__list">
+        {% for text in ['Где купить', 'НОВОСТИ', 'КОНТАКТЫ'] %}
+        <li class="footer__item">
+          <a href="#" class="footer__link">{{ text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
 		<div class="footer__communications">
 			<div class="soc-label">Мы в соц. сетях</div>
 			<ul class="soc">

@@ -8,17 +8,6 @@
 		<!-- end logo -->
 		<div class="header__wrap">
 			<div class="header__left">
-				<!-- begin search -->
-				<div class="search">
-					<form action="">
-						<button class="search__button" type="button">{{ mixins.icon('search') }}</button>
-						<div class="search__wrap">
-							<input class="search__input" type="text" placeholder="Поиск">
-							<button class="search__close">{{ mixins.icon('close') }}</button>
-						</div>
-					</form>
-				</div>
-				<!-- end search -->
 				<!-- begin nav -->
 				<nav class="nav">
 					<ul class="nav__list">
@@ -32,6 +21,17 @@
 				<!-- end nav -->
 			</div>
 			<div class="header__right">
+        <!-- begin search -->
+        <div class="search">
+          <form action="">
+            <button class="search__button" type="button">{{ mixins.icon('search') }}</button>
+            <div class="search__wrap">
+              <input class="search__input" type="text" placeholder="Поиск">
+              <button class="search__close">{{ mixins.icon('close') }}</button>
+            </div>
+          </form>
+        </div>
+        <!-- end search -->
 				<!-- begin login -->
 				<div class="login">
 					<a href="#" class="login__link" data-modal-control="login">{{ mixins.icon('user') }}ВОЙТИ</a>
