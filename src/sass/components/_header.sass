@@ -169,8 +169,16 @@
 	img
 		max-width: 96px
 		display: block
+	+md
+		max-width: 130px
+		img
+			max-width: 100%
+			z-index: 100
+			position: relative
 	.header &
 		margin-top: 26px
+		+md
+			margin-left: 15px
 		+xs
 			margin-top: 17px 
 	&_white
@@ -201,11 +209,19 @@
 
 	+md
 		width: 100%
-		margin-top: 13px
-		padding: 15px 20px 12px 43px
+		margin-top: 0
+		margin-left: 10px
+		margin-right: 0
+		padding: 16px 20px 13px 43px
 		border: 2px solid #E6E6E6
+		order: 4
 		&:after
 			display: none
+	+sm
+		margin-top: 13px
+		margin-left: 0
+		margin-right: 0
+
 	&__button
 		background-color: transparent
 		vertical-align: top
@@ -306,7 +322,7 @@
 	color: $black 
 	+f(17px,700,1.55)
 	+md
-		order: 2
+		order: 1
 		width: calc(50% - 7px)
 		margin-top: 0
 	+sm
@@ -323,8 +339,6 @@
 		+md
 			border: 2px solid #E6E6E6
 			text-align: center
-			padding: 5px 0
-		+sm
 			padding: 11px 0 7px
 		.icon
 			margin: 3px 7px 0 0
@@ -404,11 +418,21 @@
 	&:not(:first-child)
 		margin-left: 25px
 		+md
-			margin: 0
+			margin: 0 0 0 10px
+			order: 2
+			.btn
+				padding-top: 15px
+				box-shadow: none
+				padding-bottom: 13px
 			width: calc(50% - 7px)
 		+sm
+			margin-left: 0
+			margin-top: 13px
 			width: 100%
 
+
+.menuOpen
+	overflow: hidden
 
 /*Sandwich*/
 .toggle-mnu
